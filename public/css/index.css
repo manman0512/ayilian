@@ -1,0 +1,132 @@
+#main{
+    width:1200px;
+    background:#fff;
+    padding: 25px;
+    box-sizing: border-box;
+    margin:0 auto;
+}
+#main #carousel{
+    position: relative;
+    margin-bottom:20px;
+    height:552px;
+    width:1150px;
+}
+#main #carousel .carousel-item{
+    width:1150px;
+    height:552px;
+    display:inline-block;
+    position: absolute;left:0;
+    top:0;
+}
+
+#main #carousel .carousel-item>img{
+    width:1150px;
+    vertical-align:bottom;
+    position:absolute;
+    left:0;
+    top:0;
+    opacity: 0;
+    transition:all 0.5s linear;
+}
+
+
+#main #carousel .carousel-item img.show{
+    z-index:1;
+    opacity: 1;
+}
+#main #carousel .mask{
+    position: absolute;
+    top:0;
+    left:0;
+    width:0px;
+    height:552px;
+    opacity: 0.3;
+    background: rgb(255, 140, 122);
+    z-index:20;
+    cursor: pointer;
+}
+#main #info{
+    padding-left:470px;
+    position: relative;
+}
+#main #info ul.our li{
+    float:left;
+}
+#main #info ul.our li~li>a{
+    display: inline-block;
+    width:32px;
+    height:40px;
+    /* border:1px solid red; */
+}
+#main #info ul.our>li:first-child>a{
+    color:#000;
+    line-height: 40px;
+}
+
+#main #info ul.our>li~li>a{
+    background-image: url("../img/index/sp_follow.png")
+}
+#main #info ul.our>li:nth-child(2)>a{
+    background-position:0px -40px;
+}
+#main #info ul>li:nth-child(2)>a:hover{
+    background-position:0px 0px;
+}
+#main #info ul.our>li:nth-child(3)>a{
+    background-position:-32px -40px;
+}
+#main #info ul.our>li:nth-child(3)>a:hover{
+    background-position:-32px -0px;
+}
+#main #info ul.our>li:nth-child(4)>a{
+    background-position:-64px -40px;
+}
+#main #info ul.our>li:nth-child(4)>a:hover{
+    background-position:-64px -0px;
+}
+#main #info ul.our>li:nth-child(5)>a{
+    background-position: -96px -40px;
+}
+#main #info ul.our>li:nth-child(5)>a:hover{
+    background-position: -96px -0px;
+}
+#main #info ul.our>li:nth-child(6)>a{
+    background-position:-128px -40px;
+}
+#main #info ul.our>li:nth-child(6)>a:hover{
+    background-position:-128px -0px;
+}
+#main #info ul.our>li:nth-child(7)>a{
+    background-position:-160px -40px;
+}
+#main #info ul.our>li:nth-child(7)>a:hover{
+    background-position:-160px -0px;
+}
+
+/**************音乐*************/
+#main #info #music{
+    /* border:1px solid red; */
+    position: absolute;
+    top:8px;
+    right:0;
+    height:20px;
+    overflow: hidden;
+}
+#main  #music li>img{
+    width:50px;
+    vertical-align:middle;
+}
+#main  #music li>img:hover{
+    cursor:pointer;
+}
+
+#main #product{
+    display: flex;
+    justify-content: space-between;
+}
+#main #product .desc>a{
+    display: inline-block;
+}
+#main #product .desc>a>img{
+    width:366px;
+}

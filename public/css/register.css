@@ -1,0 +1,108 @@
+@charset "utf-8";
+#header .container  a.logo{
+    margin-left:0px;
+    width:100%;
+}
+#container{
+    width:100%;
+    height:700px;
+    background: url("../img/login/bg_contact.jpg") center top;
+}
+#container .login-bg{
+    width:1200px;
+    margin:0 auto;
+}
+#container .login-bg img{
+    vertical-align: bottom;
+    margin:80px 177px 30px;
+}
+#container .left-content{
+    width:400px;
+    margin-left:207px;
+    float:left;
+}
+#container .left-content p:first-child{
+    font-size:17px;
+}
+#container .left-content p~p{
+    text-align: left;
+    font-style: normal;
+    font-size: 16px;
+    font-family: "黑体";
+    line-height: 40px;
+}
+#container .left-content p>span{
+    font-style: italic;
+    font-family: "Corbel";
+}
+#container .left-content>i{
+    line-height:80px;
+    color:#484848;
+}
+/**右侧注册栏**/
+#container .right-content{
+    height:381px;
+    box-sizing: border-box;
+    float:right;
+    margin-right:207px;
+    background: rgba(255,255,255,0.8);
+    transition:all 0.5s linear;
+}
+#container .right-content .login-title h3{
+    display: inline-block;
+    font-weight:600;
+    border-bottom:transparent 1px solid;
+    width:110px;
+    text-align: center;
+    color:#666;
+    margin:10px 15px;
+    padding:5px;
+    cursor: pointer;
+}
+#container .right-content .login-title h3.active{
+    border-bottom:#0E90D2 1px solid;
+}
+#container .right-content li{
+    margin:20px 35px;
+}
+#container .right-content  li i:before{
+    font-family: "iconfont";
+    font-size:15px;
+    font-style:normal;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    content: "\f003"; 
+    box-sizing: border-box;
+}
+
+#container .right-content  li>input{
+    width:200px;
+    box-sizing: border-box;
+    padding:8px 5px;
+    border:0;
+    color:#666;
+    background-color: rgba(255,255,255,0.8);
+    outline:none;
+}
+#container .right-content div.fade{
+ display: none;
+}
+#container .right-content  .pwd-check{
+    color:#666;
+    font-size:14px;
+}
+#container .right-content  .pwd-check label{
+    margin:0 40px;
+}
+#container .right-content  .pwd-check button{
+    border:0;
+    outline:none;
+    display:inline-block;
+    width: 200px;
+    padding: 8px 0;
+    background: #0E90D2;
+    color: #fff;
+    margin: 20px 50px 20px;
+    border-radius: 4px;
+}
+
