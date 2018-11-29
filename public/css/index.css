@@ -33,6 +33,7 @@
 #main #carousel .carousel-item img.show{
     z-index:1;
     opacity: 1;
+    transform: width 0.5s linear;
 }
 #main #carousel .mask{
     position: absolute;

@@ -1,0 +1,29 @@
+#main #fashion_news{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#main #fashion_news>a>img{
+    width:275px;
+    box-sizing: border-box;
+}
+#main #fashion_news>a>img:hover{
+    border:1px solid #e1e1e1;
+    border-radius: 3px;
+    box-shadow: 0 0 1px 1px #ddd;
+}
+#main  ul.pagenation{
+/* border:1px solid red; */
+width:200px;
+margin:30px auto;
+}
+#main  ul.pagenation li{
+    float:left;
+    /* margin:10px 10px; */
+    width:40px;
+    height:40px;
+    text-align: center;
+    line-height: 40px;
+    background: #f1c4c5;
+    border-radius: 50%;
+}

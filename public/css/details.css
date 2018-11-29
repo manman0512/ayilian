@@ -1,0 +1,206 @@
+#main{
+    width:1200px;
+    margin:0 auto;
+}
+#bread{
+    padding:20px 0px 0px;
+}
+#bread>a{
+    font-size:16px;
+    color:#666;
+    text-decoration: none;
+}
+#name{
+    padding: 20px 0px 10px 0;
+    border-bottom: 1px solid #666;
+}
+#name>p:first-child,#name>p>a{
+    color:#000;
+    font-size:20px;
+    font-weight: bold;
+    font-family: "Microsoft YaHei";
+}
+#name>p>a{
+    display: inline-block;
+    padding:0px 6px;
+    font-size:18px;
+    color:#000;
+    text-decoration: none;
+}
+#name>p>a:first-child{
+    border:0;
+}
+#details{
+    margin:50px 0 0 50px;
+}
+#slide-img{
+    position:relative;
+    width:400px;
+    overflow: hidden;
+    height:56px;
+}
+#slide-img>a{
+    display:block;
+    width:18px;
+    height:54px;
+    position:absolute;
+    top:0;
+    z-index:10;
+}
+#slide-img>a:first-child{
+    /*border:1px solid black;*/
+    background: url("../img/icon/iconlist_1.png") 0 -139px;
+}
+
+#slide-img>a:last-child{
+    background: url("../img/icon/iconlist_1.png") -18px -139px;
+    right:0;
+}
+#slide-img>ul{
+    position:absolute;
+    left:18px;
+    /*width:350px;*/
+    display: inline-block;
+    height:56px;
+    width:600px;
+    overflow:hidden;
+    padding-top: 0;
+}
+#slide-img>ul>li{
+    float:left;
+}
+#slide-img>ul>li>img{
+    border:1px solid #ddd;
+    width:52px;
+    vertical-align:bottom;
+    margin:0 3px;
+}
+#right-content{
+    width:540px;
+}
+#right-content p,#right-content .spec>span,#right-content .num>span{
+    font-size:15px;
+    margin:10px 0;
+}
+#right-content>.p-price{
+    background-image: linear-gradient(to top, #FCE4DF 0%, #F2DEDE 100%);
+    padding:10px 5px;
+    box-shadow: 0px 0px 2px 2px #ddd;
+    border-radius:3px;
+}
+#right-content>.p-price>p:first-child>span {
+    color: #ed192b;
+    font-size:34px;
+}
+#right-content>:nth-child(2)>span{
+    font-size:12px;
+}
+#right-content>:nth-child(2)>img{
+    position:relative;
+    top:-6px;
+    left:2px;
+}
+#right-content .spec{
+    margin:5px 0;
+    position:relative;
+}
+#right-content .spec>a{
+    display:inline-block;
+    border:1px solid #ddd;
+    padding:11px 9px;
+    margin:3px;
+    text-decoration: none;
+    color:#333;
+    box-sizing: border-box;
+}
+#right-content .spec>a.active{
+    border:#ed5428 3px solid;
+    padding:9px 7px;
+}
+#right-content .spec>a:hover{
+    color: #ed192b;
+}
+#right-content .num input{
+    width:40px;
+    height: 34px;
+    outline:none;
+    border:1px solid #ddd;
+    font-size:15px;
+    text-align: center;
+}
+#right-content .num button{
+    width:36px;
+    height:36px;
+    line-height: 36px;
+    text-align: center;
+}
+#right-content img,#product-details img{
+    vertical-align: bottom;
+}
+#right-content .btn{
+    margin:20px 0px;
+}
+#right-content .btn>a{
+    display: inline-block;
+    padding:15px 20px;
+    color: #fff;
+    font-size:22px;
+    text-decoration: none;
+    /*border:1px solid  #ed192b;*/
+    background: #ed192b;
+    border-radius: 5px;
+    box-shadow: 0 0 1px 2px #ddd;
+    margin-right: 15px;
+}
+#right-content .btn>a:first-child{
+    background-image: linear-gradient(to bottom,#f0f0f0,#e0e0e0);
+    color:#ed192b;
+}
+#right-content .btn>a:last-child{
+    font-size:15px;
+    width:35px;
+    text-align: center;
+    padding:11px 20px;
+    position:relative;
+    top:6px;
+}
+#right-content .count fieldset{
+    border-top:2px solid #ed192b;
+    border-bottom:2px solid #ed192b;
+    border-left:0;
+    border-right:0px;
+    color:#000;
+}
+#right-content .count fieldset>legend{
+    text-align: center;
+    font-size:16px;
+    padding: 0 5px;
+}
+#right-content .count fieldset>p{
+    margin:5px 0;
+}
+/*轮播推荐*/
+#recommand{
+    width:1200px;
+    height:300px;
+    margin:30px 0 10px 0;
+}
+#recommand>p{
+    font-family: "微软雅黑";
+    font-size:22px;
+    color:#000;
+    font-weight:bold;
+    margin-bottom:10px;
+
+}
+#recommand>p>span{
+    font-size:14px;
+    background:#333333;
+    color:#fff;
+    padding:1px 3px;
+    border-radius: 1px;
+}
+#recommand #carousel{
+    border:1px solid #666;
+    height:250px;
+}

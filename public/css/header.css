@@ -73,7 +73,10 @@
 #header .nav ul>li{
     float:left;
     text-align:center;
-    padding:5px 40px;
+    padding:5px 0px; 
+    width:150px;
+    box-sizing: border-box;
+    position:relative; 
 }
 #header .nav ul>li>a{
     display: block;
@@ -82,15 +85,16 @@
     color:#000;
     overflow:hidden;
     font-family: arial;
+
 }
 #header .nav ul>li>a>i{
     font-style: normal;
     height:30px;
+    font-size:14px;
     line-height:30px;
-    display:none;
 }
 #header .nav ul>li>a>span{
-    display: block;
+    display:none;
     color:#000;
     font-family: "微软雅黑";
     height:30px;
@@ -99,11 +103,10 @@
 #header>.nav>div{
     position: absolute;
     top:8px;
-    right:200px;
-    
+    right:100px;  
 }
 #header>.nav>div>a{
-    color:#fff;
+    color:#000;
     font-style:italic;
 }
 #header>.nav>div>a:visited{

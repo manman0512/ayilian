@@ -1,3 +1,8 @@
+﻿@font-face {
+	font-family: "iconfont";
+    font-weight: normal;
+	src: url("../font/iconfont.ttf");
+}
 #header .container  a.logo{
     margin-left:0px;
     width:100%;
@@ -14,9 +19,12 @@
 #container .login-bg img{
     vertical-align: bottom;
     margin:80px 177px 30px;
+    
 }
 #container .left-content{
     margin-left:207px;
+    width:400px;
+    float:left;
 }
 #container .left-content p:first-child{
     font-size:17px;
@@ -35,4 +43,82 @@
 #container .left-content>i{
     line-height:80px;
     color:#484848;
+}
+
+#container .right-content{
+    height:255px;
+    box-sizing: border-box;
+    float:right;
+    margin-right:207px;
+    background: rgba(255,255,255,0.8);
+}
+#container .right-content li{
+    margin:18px 35px;
+}
+#container .right-content li>i{
+    padding:5px;
+    text-align: center;
+    vertical-align: middle;
+}
+#container .right-content li:first-child>i:before{
+    font-family: "iconfont";
+    font-style:normal;
+    font-size:20px;
+    content: "\e692";
+}
+#container .right-content li:last-child>i:before{
+    font-family: "iconfont";
+    font-style:normal;
+    font-size:20px;
+    content: "\e669";
+}
+
+#container .right-content  li>input{
+    width:200px;
+    box-sizing: border-box;
+    padding:8px 5px;
+    border:0;
+    color:#666;
+    background-color: rgba(255,255,255,0.8);
+    outline:none;
+}
+#container .right-content h3{
+    width:220px;
+    margin:10px auto;
+    text-align: center;
+    padding:5px 10px;
+    border-bottom:#0E90D2 solid 1px;
+    color:#666;
+    position: relative;
+}
+#container .right-content h3>a{
+    font-size:15px;
+    color:#666;
+    font-weight: normal;
+    position: absolute;
+    bottom:0;
+    right:0;
+    
+}
+#container .right-content   button{
+    border:0;
+    outline:none;
+    display:inline-block;
+    width: 200px;
+    padding: 8px 0;
+    background: #0E90D2;
+    color: #fff;
+    margin: 15px 50px 20px;
+    border-radius: 4px;
+}
+#container .right-content span>a{
+    color:#666;
+    font-size:12px;
+    float:right;
+    margin-right: 25px;
+    margin-top:5px;
+}
+#container .right-content span{
+    font:14px;
+    padding-left:30px;
 }

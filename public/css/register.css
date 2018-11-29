@@ -1,4 +1,9 @@
 @charset "utf-8";
+@font-face {
+	font-family: "iconfont";
+    font-weight: normal;
+	src: url("../font/iconfont.ttf");
+}
 #header .container  a.logo{
     margin-left:0px;
     width:100%;
@@ -41,12 +46,12 @@
 }
 /**右侧注册栏**/
 #container .right-content{
+    width:344px;
     height:381px;
     box-sizing: border-box;
     float:right;
     margin-right:207px;
     background: rgba(255,255,255,0.8);
-    transition:all 0.5s linear;
 }
 #container .right-content .login-title h3{
     display: inline-block;
@@ -65,16 +70,48 @@
 #container .right-content li{
     margin:20px 35px;
 }
-#container .right-content  li i:before{
-    font-family: "iconfont";
-    font-size:15px;
-    font-style:normal;
-    -webkit-font-smoothing:antialiased;
-    -moz-osx-font-smoothing:grayscale;
-    content: "\f003"; 
-    box-sizing: border-box;
+#container .right-content li>i{
+    padding:5px;
+    text-align: center;
+    vertical-align: middle;
 }
+#container .right-content  li>i:before{
+    font-family: "iconfont";
+    font-style:normal;
+    font-size:20px;
+}
+#container .right-content .e-mail li:first-child>i:before{
+    
+    content:"\e647";
+ }
+ #container .right-content .e-mail li:nth-child(2)>i:before{
+    content:"\e669";
+ }
+ #container .right-content .e-mail li:nth-child(3)>i:before{
+    content:"\e669";
+ }
 
+ #container .right-content .phone li:first-child>i:before{
+    content:"\e692";
+ }
+ #container .right-content .phone li:nth-child(2)>i:before{
+    content:"\e71c";
+ }
+ #container .right-content .phone li:nth-child(3)>i:before{
+    content:"\e669";
+ }
+ #container .right-content .phone li:nth-child(4)>i:before{
+    content:"\e669";
+ }
+
+#container .right-content li>span>a{
+   color: #0e90d2; 
+   padding:5px;
+   border:1px solid #ddd;
+   position:relative;
+   top:2px;
+   left:5px;
+}
 #container .right-content  li>input{
     width:200px;
     box-sizing: border-box;
@@ -94,6 +131,9 @@
 #container .right-content  .pwd-check label{
     margin:0 40px;
 }
+#container .right-content  .pwd-check label>a{
+    color:#0E90D2;
+}
 #container .right-content  .pwd-check button{
     border:0;
     outline:none;
@@ -102,7 +142,8 @@
     padding: 8px 0;
     background: #0E90D2;
     color: #fff;
-    margin: 20px 50px 20px;
+    /* margin: 20px 50px 20px; */
+    margin:20px 72px;
     border-radius: 4px;
 }
 
