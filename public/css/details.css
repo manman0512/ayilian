@@ -204,3 +204,7 @@
     border:1px solid #666;
     height:250px;
 }
+/*衣服细节*/
+#product-details #goumai img{
+    width:1150px;
+}
