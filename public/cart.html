@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>welcome to a.yilian</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+<div id="header">
+    <div class="scoll">
+        <div class="container">
+            <div class="fixed clear">
+                <a href="#" class="logo"></a>
+                <div class="search">
+                    <input type="text" placeholder="输入关键字"><a href="#"><img src="img/index/search.png" alt=""></a>
+                </div>
+                <div id="about-me">
+                    <a href="login.html">登录</a>
+                    <a href="register.html">注册</a>
+                    <a href="#">我的购物车</a>
+                    <a href="#">我的订单</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nav">
+        <ul class="clear">
+            <li>
+                <a href="index.html">
+                    <i>A.YILIAN</i>
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="current.html">
+                    <i>CURRENT</i>
+                    <span>品牌关注</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <i>FASHION NEW</i>
+                    <span>时尚新闻</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <i>LOOK BOOK</i>
+                    <span>时尚搭配</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <i>STORES</i>
+                    <span>店铺信息</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <i>CONTACT US</i>
+                    <span>联系我们</span>
+                </a>
+            </li>
+        </ul>
+        <div>
+            <a onclick="set_lan('zh_cn');" href="" class="cn" >中</a>
+            <a onclick="set_lan('en_us');" href="" class="en" >| EN</a>
+        </div>
+    </div>
+</div>
+<div id="main">
+    <div id="cart">
+        <!--头部-->
+        <div class="cart-head">
+            <ul class="clear">
+                <li>商品信息</li>
+                <li>单价(元)</li>
+                <li>数量</li>
+                <li>金额</li>
+                <li>操作</li>
+            </ul>
+        </div>
+        <!--列表-->
+        <div class="cart-item">
+            <ul class="clear">
+                <li>
+                    <input type="checkbox">
+                    <a href="#">
+                        <img src="img/product-details/sm/01/20181130_lid1_1.jpg" alt=""></a>
+                        <a href="">455555555555555555555555555555555555555555555555555555555</a>
+                </li>
+                <li>¥1900</li>
+                <li><button>-</button><span>1</span><button>+</button></li>
+                <li><span>¥1900</span></li>
+                <li><span>删除</span></li>
+            </ul>
+        </div>
+        <div class="cart-item">
+            <ul class="clear">
+                <li>
+                    <input type="checkbox">
+                    <a href="#">
+                        <img src="img/product-details/sm/01/20181130_lid1_1.jpg" alt=""></a>
+                    <a href="">455555555555555555555555555555555555555555555555555555555</a>
+                </li>
+                <li>¥1900</li>
+                <li><button>-</button><span>1</span><button>+</button></li>
+                <li><span>¥1900</span></li>
+                <li><span>删除</span></li>
+            </ul>
+        </div>
+        <div class="cart-item">
+            <ul class="clear">
+                <li>
+                    <input type="checkbox">
+                    <a href="#">
+                        <img src="img/product-details/sm/01/20181130_lid1_1.jpg" alt=""></a>
+                    <a href="">455555555555555555555555555555555555555555555555555555555</a>
+                </li>
+                <li>¥1900</li>
+                <li><button>-</button><span>1</span><button>+</button></li>
+                <li><span>¥1900</span></li>
+                <li><span>删除</span></li>
+            </ul>
+        </div>
+        <div class="cart-item">
+            <ul class="clear">
+                <li>
+                    <input type="checkbox">
+                    <a href="#">
+                        <img src="img/product-details/sm/01/20181130_lid1_1.jpg" alt=""></a>
+                    <a href="">455555555555555555555555555555555555555555555555555555555</a>
+                </li>
+                <li>¥1900</li>
+                <li><button>-</button><span>1</span><button>+</button></li>
+                <li><span>¥1900</span></li>
+                <li><span>删除</span></li>
+            </ul>
+        </div>
+        <!--结算-->
+        <div class="cart-count">
+            <ul class="clear">
+                <li><label for="chk"><input type="checkbox" id="chk"><span>&nbsp;全选</span></label></li>
+                <li>
+                    <a href="">删除</a>
+                    <a href="">移入收藏夹</a>
+                </li>
+                <li><span>已选择商品 <b id="">0</b> 件</span></li>
+                <li><span>合计:<b id="yuan">￥0.00</b></span></li>
+                <li><button>结算</button></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="cright">
+    <h2 class="clear">
+        <img src="img/index/bg_footer.jpg" alt="" class="lf">
+        <span class="right">Copyright©2013 www.ayilian.com ALL Rights Reserved       粤ICP备10210498号</span>
+        <img src="img/index/bot_logo.gif" alt="" class="right">
+
+    </h2>
+</div>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/header.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

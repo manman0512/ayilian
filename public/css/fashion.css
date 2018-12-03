@@ -1,0 +1,55 @@
+/*************新闻导航部分*************/
+#fashion-news{
+    width:1200px;
+    margin:10px auto;
+}
+#fashion-news .right-content{
+    width:750px;
+}
+#fashion-news .right-content .carousel>a{
+    display: inline-block;
+    width:40px;
+    height:40px;
+    margin:0 20px;
+}
+#fashion-news .right-content .carousel>img{
+    vertical-align:middle;
+    width:580px;
+}
+#fashion-news .right-content .carousel>a:first-child{
+    background-image: url("../img/fashion/prev.jpg");
+}
+#fashion-news .right-content .carousel>a~a {
+    background-image: url("../img/fashion/next.jpg");
+}
+/***********点赞收藏部分***************/
+#fashion-news .icon{
+    width:740px;
+    padding:15px;
+}
+#fashion-news .icon>i{
+    width:19px;
+    height:15px;
+    display: inline-block;
+    margin:0 5px;
+}
+#fashion-news .icon>i:first-child{
+    background-image: url("../img/fashion/ico_1.png");
+    margin-left:510px;
+}
+#fashion-news .icon>i:nth-child(3){
+    background-image: url("../img/fashion/ico_2.png");
+}
+#fashion-news .icon>span{
+    font-family: Corbel;
+    font-size:18px;
+    display: inline-block;
+    height:20px;
+    line-height: 20px;
+    font-weight: bold;
+}
+
+/**************右侧推荐**************/
+#fashion-news .aside{
+    width:350px;
+}

@@ -16,6 +16,7 @@
     top:0;
     left:0;
 }
+/********************固定导航栏**************************/
 #header .container.move{
     position:fixed;
     top:0;
@@ -61,15 +62,15 @@
 
 
 #header .nav{
-    box-sizing: border-box;
-    padding:0 100px;
-    text-align:center;
-    width:1200px;
-    position: relative;
-    top:0;left:0;
-    margin:0 auto;
-    border:1px solid red;
-}
+     box-sizing: border-box;
+     padding:0 100px;
+     text-align:center;
+     width:1200px;
+     position: relative;
+     top:0;left:0;
+     margin:0 auto;
+     border:1px solid red;
+ }
 #header .nav ul>li{
     float:left;
     text-align:center;
@@ -112,4 +113,16 @@
 #header>.nav>div>a:visited{
     color:#000;
     font-style: normal;
+}
+#header #about-me{
+    position:absolute;
+    right:20px;
+    top:-25px;
+}
+#header #about-me a{
+    display: inline-block;
+    font-size:14px;
+    color:#000;
+    padding-left:3px;
+
 }

@@ -3,10 +3,7 @@
     font-weight: normal;
 	src: url("../font/iconfont.ttf");
 }
-#header .container  a.logo{
-    margin-left:0px;
-    width:100%;
-}
+
 #container{
     width:100%;
     height:700px;
@@ -21,6 +18,7 @@
     margin:80px 177px 30px;
     
 }
+/******左边内容样式********/
 #container .left-content{
     margin-left:207px;
     width:400px;
@@ -45,16 +43,19 @@
     color:#484848;
 }
 
+/********右边内容样式***********/
+
 #container .right-content{
     height:255px;
     box-sizing: border-box;
     float:right;
     margin-right:207px;
-    background: rgba(255,255,255,0.8);
+    background: rgba(255,255,255,0.3);
 }
 #container .right-content li{
     margin:18px 35px;
 }
+/*****图标样式********/
 #container .right-content li>i{
     padding:5px;
     text-align: center;
@@ -72,7 +73,7 @@
     font-size:20px;
     content: "\e669";
 }
-
+/*******输入框样式*******/
 #container .right-content  li>input{
     width:200px;
     box-sizing: border-box;
@@ -82,6 +83,7 @@
     background-color: rgba(255,255,255,0.8);
     outline:none;
 }
+/*******标题样式**********/
 #container .right-content h3{
     width:220px;
     margin:10px auto;
@@ -91,6 +93,7 @@
     color:#666;
     position: relative;
 }
+/******注册样式*******/
 #container .right-content h3>a{
     font-size:15px;
     color:#666;
@@ -100,6 +103,7 @@
     right:0;
     
 }
+/*****提交按钮*********/
 #container .right-content   button{
     border:0;
     outline:none;
@@ -111,6 +115,7 @@
     margin: 15px 50px 20px;
     border-radius: 4px;
 }
+/********忘记密码样式************/
 #container .right-content span>a{
     color:#666;
     font-size:12px;
