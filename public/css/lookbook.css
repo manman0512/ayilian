@@ -1,0 +1,45 @@
+/*********look-book商品的样式***********/
+#main #lb-cool{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#main #lb-cool>a{
+    display: inline-block;
+    position: relative;
+}
+#main #lb-cool>a>img{
+    width:275px;
+    box-sizing: border-box;
+}
+#main #lb-cool>a>img:hover{
+    border:1px solid #ddd;
+    border-radius: 3px;
+    box-shadow: 0 0 1px 1px #ddd;
+}
+/******设置遮罩层的样式***/
+#main #lb-cool>a>div.details{
+    width:274px;
+     /* height:60px;  */
+    position: absolute;
+    /* border:1px solid red; */
+    bottom:6px;
+    left:0;
+    background: rgba(0,0,0,0.5);
+    text-align: center;
+    /* display: none; */
+}
+#main #lb-cool>a>div.details>p{
+    margin:10px 0;
+    color:#fff;
+    font-weight: bold;
+}
+#main #lb-cool>a>div.details>span{
+    display: inline-block;
+    padding:10px 15px 10px;
+    margin-bottom:15px;
+    background: #f1c4c5;
+    border-radius:4px;
+    color:#000;
+    font-weight:bold;
+}

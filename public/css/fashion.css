@@ -52,4 +52,27 @@
 /**************右侧推荐**************/
 #fashion-news .aside{
     width:350px;
+    height:500px;
+    overflow: hidden; 
+    margin-bottom: 20px;
+    color: #ca8a65;
+}
+#fashion-news .aside dl{
+    height:78px;
+    position: relative;
+    margin-bottom:20px;
+}
+#fashion-news .aside dd{
+    font-size:16px;
+    font-weight:bold;
+    margin-left:119px;
+}
+#fashion-news .aside dt>i{
+    display: inline-block;
+    width:33px;
+    height:14px;
+    background:url("../img/fashion/ico_more.jpg");
+    position: absolute;
+    bottom:0;
+    right:0px;
 }
