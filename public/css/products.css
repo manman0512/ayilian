@@ -17,6 +17,7 @@
     box-shadow: 0 0 8px 6px #ddd;
     margin-bottom:25px;
     padding-bottom:20px;
+	background:url("../img/xingxing.png");
 }
 #main #products>.desc>a>img{
     margin-left:25px;
