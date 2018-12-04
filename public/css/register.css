@@ -47,7 +47,7 @@
 /**右侧注册栏**/
 #container .right-content{
     width:344px;
-    height:381px;
+    height:396px;
     box-sizing: border-box;
     float:right;
     margin-right:207px;
@@ -68,7 +68,7 @@
     border-bottom:#0E90D2 1px solid;
 }
 #container .right-content li{
-    margin:20px 35px;
+    margin:20px 35px 25px;
 }
 #container .right-content li>i{
     padding:5px;
@@ -104,13 +104,14 @@
     content:"\e669";
  }
 
-#container .right-content li>span>a{
+#container .right-content li>b>a{
    color: #0e90d2; 
    padding:5px;
    border:1px solid #ddd;
    position:relative;
    top:2px;
    left:5px;
+   font-weight: normal;
 }
 #container .right-content  li>input{
     width:200px;
@@ -147,3 +148,19 @@
     border-radius: 4px;
 }
 
+/******验证失败span样式**********/
+#container .right-content  ul>li{
+    position: relative;
+}
+#container .right-content  ul>li>span.fail{
+    color:#d20e1e;
+    font-size:12px;
+    position: absolute;
+    bottom:-17px;
+    left:30px;
+}
+#container .right-content  ul>li>span.success{
+    border:1px solid #d20e1e;
+    width:20px;
+    height:20px;
+}

@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>welcome to a.yilian</title>
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/header.css">
-</head>
-<body>
 <div id="header">
     <div class="scoll">
         <div class="container">
@@ -18,9 +7,9 @@
                     <input type="text" placeholder="输入关键字"><a href="#"><img src="img/index/search.png" alt=""></a>
                 </div>
                 <div id="about-me">
-                    <a href="#">登录</a>
-                    <a href="#">注册</a>
-                    <a href="#">我的购物车</a>
+                    <a href="login.html">登录</a>
+                    <a href="register.html">注册</a>
+                    <a href="cart.html">我的购物车</a>
                     <a href="#">我的订单</a>
                 </div>
             </div>
@@ -29,28 +18,32 @@
     <div class="nav ">
         <ul class="clear">
             <li>
-                <a href="javascript:;">
+                <a href="index.html">
                     <i>A.YILIAN</i>
                     <span>首页</span>
                 </a>
             </li>
             <li>
-                <a href="javascript:;">
+                <a href="current.html">
                     <i>CURRENT</i>
                     <span>品牌关注</span>
                 </a>
             </li>
             <li>
-                <a href="javascript:;">
+                <a href="fashion_news.html">
                     <i>FASHION NEW</i>
                     <span>时尚新闻</span>
                 </a>
             </li>
-            <li>
+            <li data-toggle="dropdown">
                 <a href="javascript:;">
                     <i>LOOK BOOK</i>
                     <span>时尚搭配</span>
                 </a>
+                <ul>
+                    <li><a href="lookbook-sweet.html">都会甜美</a></li>
+                    <li><a href="lookbook-cool.html">都会霸气</a></li>
+                </ul>
             </li>
             <li>
                 <a href="javascript:;">
@@ -59,7 +52,7 @@
                 </a>
             </li>
             <li>
-                <a href="javascript:;">
+                <a href="contact.html">
                     <i>CONTACT US</i>
                     <span>联系我们</span>
                 </a>
@@ -71,7 +64,3 @@
         </div>
     </div>
 </div>
-    <script src="js/jquery-1.11.3.js"></script>
-    <script src="js/header.js"></script>
-</body>
-</html>

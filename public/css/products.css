@@ -12,16 +12,27 @@
 }
 #main #products>.desc{
     width:366px;
+    border:1px solid #ddd;
+    box-sizing: border-box;
+    box-shadow: 0 0 8px 6px #ddd;
+    margin-bottom:25px;
+    padding-bottom:20px;
 }
 #main #products>.desc>a>img{
-    width:366px;
+    margin-left:25px;
+    margin-top:25px;
+    width:314px;
     box-sizing: border-box;
     transition: all 0.5s linear;
 }
-#main #products>.desc>a>img:hover{
+/* #main #products>.desc>a>img:hover{
     border-radius: 5px;
     border: 1px solid #ddd;
     transform:scale(1.1);
+} */
+#main #products>.desc>a>img:hover{
+    border-radius:22%;
+    box-shadow: 0 0 8px 6px #ddd;
 }
 #main #products>.desc>a{
     border:1px solid transparent;
@@ -30,7 +41,6 @@
     overflow: hidden;
     width:366px;
     height:366px;
-    
 }
 
 #main #products>.desc .details  p{
@@ -38,49 +48,4 @@
     font-weight: bold;
     text-align: center;
     margin:5px;
-}
-/***********/
-#main #fashion_news{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-#main #fashion_news>a{
-    display: inline-block;
-    position: relative;
-}
-#main #fashion_news>a>img{
-    width:275px;
-    box-sizing: border-box;
-}
-#main #fashion_news>a>img:hover{
-    border:1px solid #e1e1e1;
-    border-radius: 3px;
-    box-shadow: 0 0 1px 1px #ddd;
-}
-/******设置遮罩层的样式***/
-#main #fashion_news>a>div.details{
-    width:274px;
-    /* height:60px;  */
-    position: absolute;
-    /* border:1px solid red; */
-    bottom:6px;
-    left:0;
-    background: rgba(0,0,0,0.5);
-    text-align: center;
-    /* display: none; */
-}
-#main #fashion_news>a>div.details>p{
-    margin:10px 0;
-    color:#fff;
-    font-weight: bold;
-}
-#main #fashion_news>a>div.details>span{
-    display: inline-block;
-    padding:10px 15px 10px;
-    margin-bottom:15px;
-    background: #f1c4c5;
-    border-radius:4px;
-    color:#000;
-    font-weight:bold;
 }

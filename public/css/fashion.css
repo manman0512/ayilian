@@ -76,3 +76,14 @@
     bottom:0;
     right:0px;
 }
+
+#fashion-news .fashion-content{
+    width:740px;
+    border:1px solid red;
+    text-align: center;
+}
+#fashion-news .fashion-content img{
+    margin-left:6px;
+    vertical-align:bottom;
+    width:720px;
+}

@@ -60,7 +60,7 @@
     top:-3px;
 }
 
-
+/***********导航栏************/
 #header .nav{
      box-sizing: border-box;
      padding:0 100px;
@@ -125,4 +125,22 @@
     color:#000;
     padding-left:3px;
 
+}
+/***********导航栏中的下拉菜单*************/
+#header .nav ul>li[data-toggle=dropdown]{
+    position:relative;
+}
+#header .nav ul>li[data-toggle=dropdown]>ul{
+    display: none;
+    position: absolute;
+    top:40px;
+    left:0;
+    z-index:999;
+    width:150px;
+    background:#bd4949a2;
+    
+}
+#header .nav ul>li[data-toggle=dropdown]>ul>li>a{
+    font-size:15px;
+    font-weight: normal;
 }

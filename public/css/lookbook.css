@@ -7,10 +7,12 @@
 #main #lb-cool>a{
     display: inline-block;
     position: relative;
+    margin-bottom:20px;
 }
 #main #lb-cool>a>img{
     width:275px;
     box-sizing: border-box;
+    box-shadow: 0 0 8px 8px #ddd;
 }
 #main #lb-cool>a>img:hover{
     border:1px solid #ddd;
@@ -20,7 +22,7 @@
 /******设置遮罩层的样式***/
 #main #lb-cool>a>div.details{
     width:274px;
-     /* height:60px;  */
+    /* height:60px;  */
     position: absolute;
     /* border:1px solid red; */
     bottom:6px;

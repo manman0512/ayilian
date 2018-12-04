@@ -124,3 +124,62 @@
 #main #product .desc>a>img{
     width:366px;
 }
+/********底部的各种连接**********/
+@font-face {
+	font-family: "Embassy";
+	font-style:  normal;
+    font-weight: 400;
+	src: url("../font/Embassy.ttf");
+}
+#foot{
+    width:1200px;
+    padding:0 90px;
+    margin:0 auto;
+    box-sizing: border-box;
+}
+#foot ul{
+    width:300px;
+    float:left;
+    margin:0 20px;
+}
+#foot ul>li>a{
+    display: inline-block;
+    color:#000;
+    font-weight:bold;
+    width:280px;
+    font-size:14px;
+    padding:8px 10px;
+}
+#foot ul>li>a:hover{
+    color:#FF8C7A;
+}
+
+#foot ul>li:first-child>a{
+    border-bottom:2px solid #55504D;
+}
+#foot ul>li:first-child>a>span,
+#foot ul:nth-child(2)>li:nth-child(3)>a>span,
+#foot ul:nth-child(3)>li:last-child>a>span{
+    font-family:"Embassy","mv boli";
+    font-size:24px;
+    font-weight: normal;
+    
+}
+#foot ul>li>a>span{
+    margin-right: 8px;
+}
+#foot ul>li~li>a{
+    border-bottom: 1px solid #DBC8BD;
+}
+#foot ul:nth-child(2)>li:nth-child(3)>a,#footer ul:nth-child(3)>li:last-child>a{
+    border-bottom:2px solid #55504D;
+    padding-top:32px;
+}
+#foot ul:last-child{
+    text-align: right;
+    padding-top:40px;
+    margin-left:20px;
+}
+#foot ul:last-child>li>img{
+    vertical-align: middle;
+}
