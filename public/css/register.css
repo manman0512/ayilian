@@ -159,8 +159,15 @@
     bottom:-17px;
     left:30px;
 }
+/* #container .right-content  ul>li>span{
+    position: relative;
+} */
 #container .right-content  ul>li>span.success{
-    border:1px solid #d20e1e;
-    width:20px;
-    height:20px;
+    display: inline-block;
+    position: absolute;
+    bottom:4px;
+    right:10px;
+    width:22px;
+    height:22px;
+    background: url("../img/register/true.png") no-repeat center center;
 }

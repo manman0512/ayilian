@@ -1,17 +1,19 @@
 $(function(){
     function login(){
-        let uname=$("#uname").val();
+        let account=$("#account").val();
         let upwd=$("#upwd").val();
-        if(uname!=""&&upwd!=""){
+        if(account!=""&&upwd!=""){
             $.ajax({
                 url:"http://127.0.0.1:3000/user/login",
-                data:{uname,upwd},
+                data:{account,upwd},
                 type:"post",
                 success:function(res){
                     if(res.code==-1){
                         $("#pop").show().children("b").html(res.msg);
-                        $("#uname").prop("disabled",true).parent().next().children("input").prop("disabled",true);
+                        // $("#account").prop("disabled",true).parent().next().children("input").prop("disabled",true);
+                        $("#mask").show();
                     }else{
+                        location.href="index.html"
                         // localStorage.setItem("loginId",data[0].uid);
 						// localStorage.setItem("loginName",uname);
 						// history.go(-1);
@@ -27,6 +29,7 @@ $(function(){
     $("#pop>span").on("click",function(){
         $span=$(this);
         $span.parent().hide();
-        $("#uname").prop("disabled",false).parent().next().children("input").prop("disabled",false);
+        // $("#account").prop("disabled",false).parent().next().children("input").prop("disabled",false);
+        $("#mask").hide();
     })
 })
