@@ -34,20 +34,20 @@ $(function(){
       var html="<ul>";
       for(var item of foot_nav.slice(0,6)){
        html+=`<li>
-        <a href="${item.href}"><span>${item.e_title}</span>${item.c_title}</a>
+        <a href="${item.href}"><span>${item.c_title}</span>${item.e_title}</a>
         </li>`
       }
       html+="</ul><ul>"
       // $("#foot").html(html);
       for(var item of foot_nav.slice(6,10)){
        html+=`<li>
-        <a href="${item.href}"><span>${item.e_title}</span>${item.c_title}</a>
+        <a href="${item.href}"><span>${item.c_title}</span>${item.e_title}</a>
         </li>`
       }
       html+="</ul><ul>"
       for(var item of foot_nav.slice(10)){
         html+=`<li>
-         <a href="${item.href}"><span>${item.e_title}</span>${item.c_title}</a>
+         <a href="${item.href}"><span>${item.c_title}</span>${item.e_title}</a>
          </li>`
        }
       html+=`</ul><ul>
