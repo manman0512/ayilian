@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/register.css">
     <link rel="stylesheet" href="css/base.css">
-    <title>登录</title>
+    <title>注册</title>
 </head>
 <body>
     <div id="container">
@@ -34,7 +34,7 @@
                             <span ></span>
                         </li>
                         <li>
-                            <i></i><input type="password" placeholder="设置密码" id="password1">
+                            <i></i><input type="password" placeholder="设置密码6~16位字母数字或_" id="password1">
                             <span></span>
                         </li>
                         <li>
@@ -43,8 +43,8 @@
                         </li>
                     </ul>
                     <div class="pwd-check">
-                        <label><input type="checkbox">点击表示您同意商城<a href="javascript:;">《服务协议》</a></label><br>
-                        <button>登录</button>
+                        <label><input type="checkbox" checked>点击表示您同意商城<a href="javascript:;">《服务协议》</a></label><br>
+                        <button>注册</button>
                     </div>
                 </div>
 
@@ -56,14 +56,23 @@
                         <li><i></i><input type="text" placeholder="确认密码"></li>
                     </ul>
                     <div class="pwd-check">
-                        <label><input type="checkbox">点击表示您同意商城<a href="javascript:;">《服务协议》</a></label><br>
+                        <label><input type="checkbox"checked>点击表示您同意商城<a href="javascript:;">《服务协议》</a></label><br>
                         <button>注册</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div id="footer"></div>
+     <div id="pop">
+            <b></b>
+            <span>×</span>
+        </div>
+        
+    </div>
+    <div id="mask">
+
+    </div>
+    <footer id="footer"></footer>
     <script src="js/jquery-1.11.3.js"></script>
     <script src="js/register.js"></script>
     <script src="js/footer.js"></script>

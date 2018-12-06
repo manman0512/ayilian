@@ -24,7 +24,7 @@ $(function(){
            }
         }
     });
-    /***验证密码*** */
+    /***验证密码*****/
     $("#password1").on("blur",function(){
         var $val=$(this);
         if(!$val.val()){
@@ -52,10 +52,8 @@ $(function(){
         }
     })
     /*允许提交****/
-    if($("span").hasClass("success")){
-        console.log(123);
-        $("button").on("click",function(){
-            
+    $("button").on("click",function(){  
+        if($("#email+span").hasClass("success")&&$("#password1+span").hasClass("success")&&$("#password2+span").hasClass("success")&&$(".pwd-check input").prop('checked')){  
             var email=$("#email").val();
             var upwd=$("#password1").val();
             $.ajax({
@@ -64,15 +62,23 @@ $(function(){
                 data:{email,upwd},
                 success:function(res){
                     if(res.code==1){
-                        alert("注册成功");
+                        $("#pop").show().children("b").html(`${res.msg},<a href="login.html">去登陆</a>`);
+                        $("#mask").show();
+                        $("#pop>span").on("click",function(){
+                            // $span=$(this);
+                            // $span.parent().hide();
+                            // $("#account").prop("disabled",false).parent().next().children("input").prop("disabled",false);
+                            // $("#mask").hide();
+                            // $("#email").val("").removeClass("success").parent().next().children("input").val("").removeClass("success").parent().next().children("input").val("").removeClass("success");   
+                            location.reload();    
+                        })
                     }else{
                         alert("注册失败");
                     }
                 }
             })
-        })
-        
-    }
+        }
+    })
     /*****封装用户账号是否已经存在的方法*********/ 
     function check(account,router,tar){
         $.ajax({

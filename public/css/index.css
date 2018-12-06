@@ -1,3 +1,9 @@
+@font-face {
+	font-family: "Embassy";
+	font-style:  normal;
+    font-weight: 400;
+	src: url("../font/Embassy.ttf");
+}
 #main #carousel{
     position: relative;
     margin-bottom:20px;
@@ -125,12 +131,7 @@
     width:366px;
 }
 /********底部的各种连接**********/
-@font-face {
-	font-family: "Embassy";
-	font-style:  normal;
-    font-weight: 400;
-	src: url("../font/Embassy.ttf");
-}
+
 #foot{
     width:1200px;
     padding:0 90px;
