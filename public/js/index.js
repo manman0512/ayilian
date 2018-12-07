@@ -6,13 +6,14 @@ $(function(){
     type:"get",
     success:function(output){
       // console.log(output);
+      
       var{carousel,pics,foot_nav}=output;
 
       //首页轮播
       var html="";
       for(var item of carousel){
         // console.log(item.img);
-        html+=`<a class="carousel-item" href="${item.href}">
+        html+=`<a class="carousel-item" href="products.html">
               <img src="${item.img}" alt="${item.title}">
               </a>`
       }
@@ -51,10 +52,10 @@ $(function(){
          </li>`
        }
       html+=`</ul><ul>
-      <li>
-          <img src="img/index/sub_logo.gif" alt="">
-      </li>
-    </ul> `;
+                <li>
+                    <img src="img/index/sub_logo.gif" alt="">
+                </li>
+              </ul> `;
       $("#foot").html(html);
       function task(){
         var $tar=$("#carousel img.show");
@@ -75,7 +76,20 @@ $(function(){
           function(){task();timer=setInterval(task,5500)}
       )
     }
-  })
+    })
+    /***********音频播放************* */
+    
+    $("#music").on("click",function(){
+      // console.log($(this).children(":first").children());
+      var audio=document.getElementsByTagName("audio")[0];
+      if(audio.paused){
+        audio.play();
+        $(this).children(":first").show();
+      }else{
+        audio.pause();
+        $(this).children(":first").hide();
+      }
+    })
 
   // function task(){
   //   var $tar=$("#carousel img.show");

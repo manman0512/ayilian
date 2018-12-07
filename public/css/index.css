@@ -62,7 +62,7 @@
     color:#000;
     line-height: 40px;
 }
-
+/********中间的图标**********/
 #main #info ul.our>li~li>a{
     background-image: url("../img/index/sp_follow.png")
 }
@@ -119,7 +119,7 @@
 #main  #music li>img:hover{
     cursor:pointer;
 }
-
+/*******底部的三张图**********/
 #main #product{
     display: flex;
     justify-content: space-between;
