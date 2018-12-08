@@ -2,28 +2,28 @@
     width:1200px;
     margin:0 auto;
 }
-#bread{
-    padding:20px 0px 0px;
-}
-#bread>a{
-    font-size:16px;
-    color:#666;
-    text-decoration: none;
-}
+
+/*********标题样式**********/
 #name{
     padding: 20px 0px 10px 0;
     border-bottom: 1px solid #666;
 }
+#name .guide{
+    width:500px;
+    position: relative;
+    bottom:-13px;
+    left:60px;
+}
 #name>p:first-child,#name>p>a{
     color:#000;
-    font-size:20px;
+    font-size:21px;
     font-weight: bold;
     font-family: "Microsoft YaHei";
 }
 #name>p>a{
     display: inline-block;
     padding:0px 6px;
-    font-size:18px;
+    font-size:15px;
     color:#000;
     text-decoration: none;
 }
@@ -33,11 +33,62 @@
 #details{
     margin:50px 0 0 50px;
 }
+/*************左边图片的样式*****************/
+#left-content {
+    position: relative;
+}
+#left-content #lg-img{
+    width:400px;
+    height:400px;
+    position: absolute;
+    top:0px;
+    right:-400px;
+    border:1px solid #ddd;
+    z-index: 10;
+    /* background-image:url("../img/product_details/lg/01/20181130_lid1_1.jpg"); */
+    background-size: 200% 200%;/*本应该是2倍的中图片**/
+    background-repeat:no-repeat;
+    display: none;
+}
+/********mask样式和superMask样式***********/
+#left-content #mask{
+    position: absolute;
+    top:0;
+    left:0;
+    width:200px;
+    height:200px;
+    background:rgba(244, 122, 134,0.3); 
+    display:none;
+    /* border:1px solid red; */
+}
+#left-content #superMask{
+    position: absolute;
+    top:0;
+    left:0;
+    width:400px;
+    height:400px;
+    z-index:10;
+    /* border:1px solid red; */
+}
+/*******************图片滑动*******************/
 #slide-img{
     position:relative;
     width:400px;
-    overflow: hidden;
     height:56px;
+}
+#slide-img>.img-outer{
+    position:absolute;
+    left:18px;
+    top:0;
+    height:56px;
+    width:364px;
+    overflow:hidden;
+    padding-top: 0;
+}
+#slide-img>.img-outer>ul{
+    display: inline-block;
+    height:56px;
+    padding-top: 0;
 }
 #slide-img>a{
     display:block;
@@ -51,32 +102,38 @@
     /*border:1px solid black;*/
     background: url("../img/icon/iconlist_1.png") 0 -139px;
 }
+#slide-img>a:first-child.disabled{
+    /*border:1px solid black;*/
+    background: url("../img/icon/iconlist_1.png") -68px -139px;
+}
 
 #slide-img>a:last-child{
     background: url("../img/icon/iconlist_1.png") -18px -139px;
     right:0;
 }
-#slide-img>ul{
-    position:absolute;
-    left:18px;
-    /*width:350px;*/
-    display: inline-block;
-    height:56px;
-    width:600px;
-    overflow:hidden;
-    padding-top: 0;
+#slide-img>a:last-child.disabled{
+    background: url("../img/icon/iconlist_1.png") -84px -139px;
+    right:0;
 }
-#slide-img>ul>li{
+
+
+#slide-img>.img-outer>ul>li{
     float:left;
+    box-sizing: border-box;
+    /* border: 1px solid #ddd; */
+    padding:0px 3px;
+    width:60px;
 }
-#slide-img>ul>li>img{
+#slide-img>.img-outer>ul>li>img{
     border:1px solid #ddd;
     width:52px;
     vertical-align:bottom;
-    margin:0 3px;
+    /* margin:0 3px; */
 }
+/************右边内容的样式*****************/
 #right-content{
     width:540px;
+    margin-right:50px;
 }
 #right-content p,#right-content .spec>span,#right-content .num>span{
     font-size:15px;
@@ -106,19 +163,24 @@
 }
 #right-content .spec>a{
     display:inline-block;
-    border:1px solid #ddd;
-    padding:11px 9px;
+    border:#ddd 2px solid;
+    padding:10px 14px;
     margin:3px;
     text-decoration: none;
     color:#333;
     box-sizing: border-box;
 }
 #right-content .spec>a.active{
-    border:#ed5428 3px solid;
+    border:#FF0036 2px solid;
     padding:9px 7px;
+    background: url("../img/product_details/selsected.png") no-repeat right bottom;
+}
+#right-content .spec.size>a.selected{
+    background: url("../img/product_details/selsected.png") no-repeat right bottom;
+    border:#FF0036 2px solid;
 }
 #right-content .spec>a:hover{
-    color: #ed192b;
+    color: #FF0036;
 }
 #right-content .num input{
     width:40px;
@@ -133,7 +195,12 @@
     height:36px;
     line-height: 36px;
     text-align: center;
+    outline:none;
 }
+#right-content .num span~span{
+    margin-left:30px;
+}
+
 #right-content img,#product-details img{
     vertical-align: bottom;
 }
@@ -203,6 +270,7 @@
 #recommand #carousel{
     border:1px solid #666;
     height:250px;
+    width: 1150px;
 }
 /*衣服细节*/
 #product-details #goumai img{

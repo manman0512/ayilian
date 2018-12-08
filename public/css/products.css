@@ -45,8 +45,10 @@
 }
 
 #main #products>.desc .details  p{
-    color:#f78e90;
+    color:#000;
     font-weight: bold;
     text-align: center;
     margin:5px;
+    font-family: "Corbel";
+    font-size:18px;
 }

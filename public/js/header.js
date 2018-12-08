@@ -11,7 +11,9 @@ $(function(){
 				var kwords=$tar.parent().prev().val();
 				if(kwords.trim()!==""){
 					location.href=`products.html?kwords=${kwords}`;
-				}
+				}else{
+                    location.href=`products.html`;
+                }
             }).parent().prev().keyup(function(e){
 				if(e.keyCode==13){
                 $(this).next().children().click();
@@ -21,18 +23,6 @@ $(function(){
 			if(location.search.indexOf("kwords")!=-1){
 				$(".search input").val(decodeURIComponent(location.search.split("=")[1]));
 			 }
-			
-			/********导航栏********/
-			$("[data-toggle=dropdown]+li").hide();
-			$("[data-toggle=dropdown]").parent().on("mouseover",function(){
-    			var $li=$(this);
-    			$li.children(":last-child").show();
-			})
-			//$("[data-trigger=dropdown]").parent().on("mouseout",function(){
-    		.on("mouseout",function(){
-        	var $li=$(this);
-        	$li.children(":last-child").hide();
-			});
             //设置导航中英文切换
             $(".nav>ul>li").on("mouseenter",function(){
                 var $tar=$(this);

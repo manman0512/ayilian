@@ -21,7 +21,6 @@ $(function(){
                 }
             })
         }
-        
     }
     $("#btn").on("click",function(){
         login();

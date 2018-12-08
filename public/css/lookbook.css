@@ -29,7 +29,7 @@
     left:0;
     background: rgba(0,0,0,0.5);
     text-align: center;
-    /* display: none; */
+     display: none; 
 }
 #main #lb-cool>a>div.details>p{
     margin:10px 0;
