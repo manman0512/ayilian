@@ -52,3 +52,28 @@
     font-family: "Corbel";
     font-size:18px;
 }
+
+/******分页样式******/
+#main  ul.pagenation{
+    /* border:1px solid red; */
+    width:280px;
+    margin:30px auto;
+}
+#main  ul.pagenation li{
+    float:left;
+    /* margin:10px 10px; */
+    width:40px;
+    height:40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#main  ul.pagenation li.active{
+    background: #f1c4c5;
+}
+#main  ul.pagenation li.disabled{
+    opacity:0.5;
+}
+
+
