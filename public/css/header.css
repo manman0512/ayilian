@@ -60,6 +60,20 @@
 #header .container>.fixed>.search>a>img{
      vertical-align:bottom; 
 }
+#header #about-me>span>b{
+    display: inline-block;
+    width:120px;
+    height:16px;
+    line-height:16px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    color:#393939;
+    font-weight:normal;
+    position: relative;
+    top:4px;
+    left:4px;
+}
 
 /***********导航栏************/
 #header .nav{
@@ -139,6 +153,9 @@
     z-index:999;
     width:150px;
     background:rgba(201,77,58,0.9);
+}
+#header .nav ul>li[data-toggle=dropdown]>ul>li:hover{
+    background:rgba(238, 136, 120, 0.9);
 }
 #header .nav ul>li[data-toggle=dropdown]>ul>li>a{
     font-size:15px;

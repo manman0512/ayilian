@@ -6,7 +6,36 @@ $(function(){
         type:"get",
         success:function(res){
             $(res).replaceAll("#header");
-            var $btn=$(".search img").on("click",function(){
+            var email=sessionStorage.getItem("email");
+            if(email){
+                if(email){
+                    var $html=$(`<span title="${email}">欢迎<b>${email}</b></span><a href="index.html" class="signout">注销</a>`);
+                    // $("#about-me").children(":first").remove();
+                    $html.replaceAll("#about-me>a:lt(1)");
+                }
+            }
+            $(".signout").on("click",function(e){
+                e.preventDefault();
+                sessionStorage.removeItem("email");
+                $("#about-me").html(`<a href="login.html">登录</a>
+                <a href="register.html">注册</a>
+                <a href="cart.html">我的购物车</a>
+                <a href="#">我的订单</a>`);
+            })
+            
+            // $.ajax({
+            //     url:"http://127.0.0.1:3000/user/islogin",
+            //     type:"get",
+            //     success:function(result){
+            //         console.log(result);
+            //         if(result.email){
+            //             var $html=$(`<span>欢迎${result.email}</span><a href="index.html">注销</a>`)
+            //         $html.replaceAll("#about-me>a:lt(2)");
+            //         }
+                    
+            //     }
+            // })
+                var $btn=$(".search img").on("click",function(){
 				var $tar=$(this);
 				var kwords=$tar.parent().prev().val();
 				if(kwords.trim()!==""){

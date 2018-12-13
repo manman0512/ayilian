@@ -122,21 +122,23 @@ $(function(){
           var left=e.offsetX-msize/2;
           var top=e.offsetY-msize/2;
           //防止mask超出lgDiv范围！
+            /***防止左边出边界 */
             if(left<0){
                 left=0; 
-            }else if(left>200){
+            } 
+            if(left>200){
                 left=200;
-            }else{
-                $(this).prev().css("left",`${left}px`);
             }
-
+            $(this).prev().css("left",`${left}px`);
+            /****防止右边出边界 */
             if(top<0){
                 top=0; 
-            }else if(top>200){
-                top=200;
-            }else{
-                $(this).prev().css("top",`${top}px`);
             }
+            if(top>200){
+                top=200;
+            }
+            $(this).prev().css("top",`${top}px`);
+            
             //大图片的背景位置变化
           $lImg.css("background-position",`-${2*left}px -${2*top}px`)
             

@@ -1,7 +1,7 @@
 $(function(){
     function login(){
-        let account=$("#account").val();
-        let upwd=$("#upwd").val();
+        var account=$("#account").val();
+        var  upwd=$("#upwd").val();
         if(account!=""&&upwd!=""){
             $.ajax({
                 url:"http://127.0.0.1:3000/user/login",
@@ -13,6 +13,7 @@ $(function(){
                         // $("#account").prop("disabled",true).parent().next().children("input").prop("disabled",true);
                         $("#mask").show();
                     }else{
+                        sessionStorage.setItem("email",account);
                         location.href="index.html"
                         // localStorage.setItem("loginId",data[0].uid);
 						// localStorage.setItem("loginName",uname);
