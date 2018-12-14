@@ -89,7 +89,8 @@ $(function(){
             if(res.code==1){
                 tar.next().html("").addClass("success").removeClass("fail");
             }else{
-                alert(res.msg);
+                // alert(res.msg);
+                tar.next().html(`${res.msg}`).addClass("fail").removeClass("success")
             }
         }
     });

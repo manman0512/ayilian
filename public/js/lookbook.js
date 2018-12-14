@@ -9,7 +9,7 @@ $(function(){
             // console.log(output);
             var html="";
             for(var item of output){
-                html+=`<a href="${item.href}">
+                html+=`<a href="javascript:;">
                 <img src="${item.img_url}" alt="">
                 <div class="details">
                     <p>¥${item.price}</p>
@@ -19,6 +19,15 @@ $(function(){
             </a>`
             }
             $("#lb-cool").html(html);
+            $("#pop").hide();
+            $("#lb-cool").on("click","a",function(e){
+                e.preventDefault();
+                var img=$(this).children("img").attr("src");
+                $("#pop>img").prop("src",`${img}`).parent().show().next().addClass("show");
+            });
+            $("#pop>span").on("click",function(){
+                $(this).parent().hide().next().removeClass("show");
+            })
         }
      })
     

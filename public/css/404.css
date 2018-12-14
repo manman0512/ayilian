@@ -17,8 +17,10 @@
     animation: change 1s linear; 
 }
 #product-404>h2{
+    font-size:16px;
+    color:#333;
     position: absolute;
     top:70%;
     left:50%;
-    margin-left:-110px;
+    margin-left:-151px;
 }

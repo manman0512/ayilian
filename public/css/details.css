@@ -9,13 +9,13 @@
     border-bottom: 1px solid #666;
 }
 #name .guide{
-    width:500px;
+    width:506px;
     position: relative;
     bottom:-13px;
-    left:60px;
+    left:10px;
 }
 #name>p:first-child,#name>p>a{
-    color:#000;
+    color:#585757;
     font-size:21px;
     font-weight: bold;
     font-family: "Microsoft YaHei";
@@ -24,13 +24,13 @@
     display: inline-block;
     padding:0px 6px;
     font-size:15px;
-    color:#000;
+    color:#585757;
     text-decoration: none;
 }
 #name>p>a:first-child{
     border:0;
 }
-#details{
+#detail{
     margin:50px 0 0 50px;
 }
 /*************左边图片的样式*****************/
@@ -123,12 +123,17 @@
     /* border: 1px solid #ddd; */
     padding:0px 3px;
     width:60px;
-}
-#slide-img>.img-outer>ul>li>img{
-    border:1px solid #ddd;
-    width:52px;
-    vertical-align:bottom;
+    box-sizing: border-box;
     /* margin:0 3px; */
+    height:54px;
+}
+
+#slide-img>.img-outer>ul>li>img{
+     border:1px solid #ddd; 
+    width:52px;
+    height:50px;
+    vertical-align:bottom;
+     box-sizing: border-box; 
 }
 /************右边内容的样式*****************/
 #right-content{
@@ -229,7 +234,8 @@
     text-align: center;
     padding:11px 20px;
     position:relative;
-    top:6px;
+    top: 6px;
+    height: 37px;
 }
 #right-content .count fieldset{
     border-top:2px solid #ed192b;
@@ -273,6 +279,20 @@
     width: 1150px;
 }
 /*衣服细节*/
-#product-details #goumai img{
+#product-details  img{
     width:1150px;
+}
+/******totop*****/
+#totop{
+    position:fixed;
+    right:0;
+    bottom:100px;
+    width:40px;
+    height:40px;
+    background:#000;
+    color:#fff;
+    display:none;
+}
+#totop:hover{
+    background: #c4952a;
 }

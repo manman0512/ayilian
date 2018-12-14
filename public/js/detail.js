@@ -6,9 +6,9 @@ $(function(){
       data:{pid},
       dataType:"json",
       success:function(res){
-        // console.log(res);
+        //  console.log(res);
         /**********商品名字和服务承诺******* */
-        var {product, specs, pics}=res;
+        var {product, specs, pics,model}=res;
         var {title,price,promise,sold_count,stock}=product;
         $("#name>:first-child").html(title);
         $("#right-content>.p-price>:first-child>span").html(`￥${price.toFixed(2)}`).parent().next().html(`服务承诺：${promise}`); 
@@ -122,26 +122,50 @@ $(function(){
           var left=e.offsetX-msize/2;
           var top=e.offsetY-msize/2;
           //防止mask超出lgDiv范围！
+            /***防止左边出边界 */
             if(left<0){
                 left=0; 
-            }else if(left>200){
+            } 
+            if(left>200){
                 left=200;
-            }else{
-                $(this).prev().css("left",`${left}px`);
             }
-
+            $(this).prev().css("left",`${left}px`);
+            /****防止右边出边界 */
             if(top<0){
                 top=0; 
-            }else if(top>200){
-                top=200;
-            }else{
-                $(this).prev().css("top",`${top}px`);
             }
+            if(top>200){
+                top=200;
+            }
+            $(this).prev().css("top",`${top}px`);
+            
             //大图片的背景位置变化
           $lImg.css("background-position",`-${2*left}px -${2*top}px`)
             
         })
+       
+        /*************模特*********** */
+        var html="";
+        for(var m of model){
+          html+=`
+            <img src="${m.img_url}" id="${m.id}">
+          `;
         }
+        $("#product-details").html(html);
+
+        $(window).on("scroll",function(){
+            var scrollTop=document.body.scrollTop|| document.documentElement.scrollTop;
+            if(scrollTop>=500){
+                $("#totop").show();
+            }else{
+                $("#totop").hide();
+            }
+        })
+        $("#totop").on("click",function(){
+            window.scrollTo(0,0);
+        })
+        }
+        
     })
   
 })
