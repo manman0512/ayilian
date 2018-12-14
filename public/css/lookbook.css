@@ -49,13 +49,14 @@
 #pop {
     width:700px;
     background: #fff;
-    position: absolute;
+    position: fixed;
     top:50%;
     margin-left:-350px;
     margin-top:-300px;
     left:50%;
     z-index: 100;
-    border:1px solid red;
+    display: none;
+    /* border:1px solid red; */
 }
 #pop>img{
     width:400px;
@@ -73,10 +74,10 @@
     cursor: pointer;
     border-radius: 50%;
     display: inline-block;
-    background: rgb(139, 139, 139);
+    background:rgba(0,0,0,0.9); 
 }
 #mask.show{
-    position: absolute;
+    position: fixed;
     top:0;
     left:0;
     width:100%;
@@ -84,4 +85,28 @@
     background:rgba(0,0,0,0.5); 
     z-index: 99;
     /* display: none; */
+}
+#pop>b{
+    position:absolute;
+    top:15%;
+    right:25%;
+    color:#c4952a;
+}
+#pop div.detail{
+    width:350px;
+    position: absolute;
+    top:50%;
+    right:5px;
+    font-size:18px;
+    color:#000;
+    font-family: "微软雅黑";
+    margin-top:-149px;
+    margin-left:-200px;
+}
+#pop div.detail>p{
+
+    font-size:18px;
+    color:rgb(33, 97, 83);
+    font-family: "微软雅黑";
+    margin-top:15px;
 }

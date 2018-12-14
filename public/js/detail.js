@@ -6,9 +6,9 @@ $(function(){
       data:{pid},
       dataType:"json",
       success:function(res){
-        // console.log(res);
+        //  console.log(res);
         /**********商品名字和服务承诺******* */
-        var {product, specs, pics}=res;
+        var {product, specs, pics,model}=res;
         var {title,price,promise,sold_count,stock}=product;
         $("#name>:first-child").html(title);
         $("#right-content>.p-price>:first-child>span").html(`￥${price.toFixed(2)}`).parent().next().html(`服务承诺：${promise}`); 
@@ -143,7 +143,29 @@ $(function(){
           $lImg.css("background-position",`-${2*left}px -${2*top}px`)
             
         })
+       
+        /*************模特*********** */
+        var html="";
+        for(var m of model){
+          html+=`
+            <img src="${m.img_url}" id="${m.id}">
+          `;
         }
+        $("#product-details").html(html);
+
+        $(window).on("scroll",function(){
+            var scrollTop=document.body.scrollTop|| document.documentElement.scrollTop;
+            if(scrollTop>=500){
+                $("#totop").show();
+            }else{
+                $("#totop").hide();
+            }
+        })
+        $("#totop").on("click",function(){
+            window.scrollTo(0,0);
+        })
+        }
+        
     })
   
 })

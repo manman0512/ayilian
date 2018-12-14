@@ -74,6 +74,7 @@
 
 #main .cart-item>ul>li:first-child>a>img{
     vertical-align: middle;
+    width:50px;
 }
 
 

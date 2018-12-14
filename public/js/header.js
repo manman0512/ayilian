@@ -17,10 +17,21 @@ $(function(){
             $(".signout").on("click",function(e){
                 e.preventDefault();
                 sessionStorage.removeItem("email");
+                sessionStorage.removeItem("uid");
                 $("#about-me").html(`<a href="login.html">登录</a>
                 <a href="register.html">注册</a>
-                <a href="cart.html">我的购物车</a>
+                <a href="#" id='my-cart'>我的购物车</a>
                 <a href="#">我的订单</a>`);
+            })
+            $("#my-cart").on("click",function(e){
+                console.log(123);
+                e.preventDefault();
+                var uid=sessionStorage.getItem("uid");
+                if(uid){
+                    location.href="cart.html"
+                }else{
+                    window.alert("请先登录");
+                }
             })
             
             // $.ajax({

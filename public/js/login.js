@@ -13,7 +13,9 @@ $(function(){
                         // $("#account").prop("disabled",true).parent().next().children("input").prop("disabled",true);
                         $("#mask").show();
                     }else{
+                        let uid=res.uid;
                         sessionStorage.setItem("email",account);
+                        sessionStorage.setItem("uid",uid);
                         location.href="index.html"
                         // localStorage.setItem("loginId",data[0].uid);
 						// localStorage.setItem("loginName",uname);
