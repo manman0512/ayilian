@@ -6,7 +6,47 @@ $(function(){
         type:"get",
         success:function(res){
             $(res).replaceAll("#header");
-            var $btn=$(".search img").on("click",function(){
+            var email=sessionStorage.getItem("email");
+            if(email){
+                if(email){
+                    var $html=$(`<span title="${email}">欢迎<b>${email}</b></span><a href="index.html" class="signout">注销</a>`);
+                    // $("#about-me").children(":first").remove();
+                    $html.replaceAll("#about-me>a:lt(1)");
+                }
+            }
+            $(".signout").on("click",function(e){
+                e.preventDefault();
+                sessionStorage.removeItem("email");
+                sessionStorage.removeItem("uid");
+                $("#about-me").html(`<a href="login.html">登录</a>
+                <a href="register.html">注册</a>
+                <a href="#" id='my-cart'>我的购物车</a>
+                <a href="#">我的订单</a>`);
+            })
+            $("#my-cart").on("click",function(e){
+                console.log(123);
+                e.preventDefault();
+                var uid=sessionStorage.getItem("uid");
+                if(uid){
+                    location.href="cart.html"
+                }else{
+                    window.alert("请先登录");
+                }
+            })
+            
+            // $.ajax({
+            //     url:"http://127.0.0.1:3000/user/islogin",
+            //     type:"get",
+            //     success:function(result){
+            //         console.log(result);
+            //         if(result.email){
+            //             var $html=$(`<span>欢迎${result.email}</span><a href="index.html">注销</a>`)
+            //         $html.replaceAll("#about-me>a:lt(2)");
+            //         }
+                    
+            //     }
+            // })
+                var $btn=$(".search img").on("click",function(){
 				var $tar=$(this);
 				var kwords=$tar.parent().prev().val();
 				if(kwords.trim()!==""){
@@ -51,11 +91,13 @@ $(function(){
         var scrollTop=$(this).scrollTop();
         if(scrollTop>150&&!isToTop){
             $("#header  .container").addClass("move");
-            $("#header  .container .search input").css("background","#fff");
+            $("#header  .container .search input").css("background","#fff")
+            .parent().next().css('color',"#fff").children("a").css('color',"#fff");
             isToTop=true;
         }
         if(scrollTop<150&&isToTop){
-            $("#header .container").removeClass("move")
+            $("#header .container").removeClass("move").children()
+            .children(":last").css("color","#333").children("a").css("color","#333");
             isToTop=false;
         }
     })
