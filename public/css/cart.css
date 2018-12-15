@@ -5,18 +5,30 @@
     border:1px solid #ddd;
     background:#eee;
 }
-#main .cart-head ul>li,#main .cart-count>ul>li,#main .cart-item>ul>li{
+#main .cart-head ul>li,#main .cart-item>ul>li{
     float:left;
-    width:145px;
-    padding:10px 5px;
+    width:155px;
+    padding:10px 0px;
     text-align: center;
     color:#333;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+#main .cart-count>ul>li{
+    float:left;
+    width:170px;
+    text-align: center;
+    color:#333;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 #main .cart-head ul>li:first-child,#main .cart-count>ul>li:first-child,#main .cart-item>ul>li:first-child{
     width:368px;
     text-align: left;
     padding-left:50px;
     box-sizing: border-box;
+    
 }
 /******购物车底部*****/
 #main .cart-count ul>li>a{
@@ -52,9 +64,15 @@
     color: #666;
     font-size:14px;
 }
-#main .cart-item>ul>li>button{
+#main .cart-item>ul>li:nth-child(4)>span{
+    width:40px;
+    display: inline-block;
+    height:35px;
+    line-height: 35px;
+}
+#main .cart-item>ul>li:nth-child(4)>button{
+    width:33px;
     padding:8px;
-    margin:0 10px;
 }
 #main .cart-item>ul>li:last-child>span{
     cursor:pointer;
@@ -90,7 +108,7 @@
     margin-top:-110px;
     margin-left:-150px;
     z-index: 10;
-    border:1px solid ccc;
+    border:1px solid #ccc;
     background:#fff;
     box-shadow: 0px 0px 5px #393939;
     display:none;
@@ -115,9 +133,27 @@
     left:40px;
     
 }
-#mask.show{
+#mask{
     position: absolute;
+    top:0;
+    left:0;
+    /* background: #333; */
     width: 100%;
     height:100%;
     display: none;
+}
+
+/**************购物车没有商品提示*****************/
+#cart .no{
+    height:200px;
+    text-align: center;
+    font-size:20px;
+    line-height: 200px;
+    color:#c39329;
+    font-family: "黑体";
+
+}
+#cart .no a{
+    text-decoration: underline;
+    font-size:18px;
 }

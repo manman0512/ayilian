@@ -74,7 +74,9 @@
     top:4px;
     left:4px;
 }
-
+#header #about-me>a:hover{
+    color:#c39329 !important;
+}
 /***********导航栏************/
 #header .nav{
      box-sizing: border-box;
