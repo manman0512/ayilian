@@ -119,19 +119,20 @@
     <script src="js/footer.js"></script>
     <script>
         /***********音频播放************* */
-    var musci=document.getElementById("#music");
+    var music=document.getElementById("music");
     var audio=document.getElementsByTagName("audio")[0];
     audio.play();
     music.onclick=function(){
       // console.log($(this).children(":first").children());
       if(audio.paused){
         audio.play();
-        $(this).children(":first").show();
+        this.firstElementChild.style.display="block";
+        console.log(123)
       }else{
         audio.pause();
-        $(this).children(":first").hide();
+        this.firstElementChild.style.display="none";
       }
-    })
+    }
     </script>
 </body>
 </html>
