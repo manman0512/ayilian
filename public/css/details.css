@@ -262,33 +262,11 @@
 #right-content .count fieldset>p{
     margin:5px 0;
 }
-/*轮播推荐*/
-#recommand{
-    width:1200px;
-    height:300px;
-    margin:30px 0 10px 0;
-}
-#recommand>p{
-    font-family: "微软雅黑";
-    font-size:22px;
-    color:#000;
-    font-weight:bold;
-    margin-bottom:10px;
 
-}
-#recommand>p>span{
-    font-size:14px;
-    background:#333333;
-    color:#fff;
-    padding:1px 3px;
-    border-radius: 1px;
-}
-#recommand #carousel{
-    border:1px solid #666;
-    height:250px;
-    width: 1150px;
-}
 /*衣服细节*/
+#product-details {
+    margin-top:50px;
+}
 #product-details  img{
     width:1150px;
 }
@@ -366,4 +344,60 @@
     height:100%;
     display: none;
     z-index: 1000;
+}
+
+/*轮播推荐*/
+#recommand{
+    width:1200px;
+    height:300px;
+    margin:30px 0 10px 0;
+}
+#recommand>p{
+    font-family: "微软雅黑";
+    font-size:22px;
+    color:#000;
+    font-weight:bold;
+    margin-bottom:10px;
+
+}
+#recommand>p>span{
+    font-size:14px;
+    background:#333333;
+    color:#fff;
+    padding:1px 3px;
+    border-radius: 1px;
+}
+#recommand #carousel{
+    border:1px solid #ddd;
+    height:300px;
+    width: 1150px;
+}
+#caroudel-item1,#caroudel-item2{
+    width:1150px;
+    text-align: center;
+}
+#caroudel-item1 img,#caroudel-item2 img{
+    margin-left:10px;
+    width:250px;
+    margin-top:11px;
+}
+#caroudel-item1 p,#caroudel-item2 p{
+    width:250px;
+    margin-left:10px;
+}
+#caroudel-item1 div,#caroudel-item2 div{
+    width:25%;
+}
+#caroudel-item1 .img-item,#caroudel-item2 .img-item{
+    display:inline-block;
+    color:#666;
+    font-size:11px;
+    font-weight: bold;
+}
+#caroudel-item1 .img-item>p,#caroudel-item2 .img-item>p{
+    width:250px;
+    text-align: center;
+}
+#caroudel-item2{
+    margin-left:-290px;
 }

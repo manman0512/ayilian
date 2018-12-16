@@ -6,9 +6,9 @@ $(function(){
         data:{pid},
         dataType:"json",
         success:function(res){
-            //  console.log(res);
+             console.log(res);
             /**********商品名字和服务承诺******* */
-            var {product, specs, pics,model}=res;
+            var {product, specs, pics,model,recomment}=res;
             var {title,price,promise,sold_count,stock}=product;
             $("#name>:first-child").html(title);
             $("#right-content>.p-price>:first-child>span").html(`￥${price.toFixed(2)}`).parent().next().html(`服务承诺：${promise}`); 
@@ -170,7 +170,7 @@ $(function(){
             //         url:"http://127.0.0.1:3000/products/addCart"
             //     })
             // })
-
+            
             /*********加入购物车***************/
             $("#addCart").on("click",function(e){
                 var scrollTop=document.body.scrollTop|| document.documentElement.scrollTop;
@@ -178,7 +178,8 @@ $(function(){
                 e.preventDefault();
                 var uid=sessionStorage.getItem("uid");
                 if(!uid){
-                    window.alert("请登录");
+                    // window.alert("请登录");
+                    toast("请登录",false);
                     return;
                 }
                 var pid=product.pid;
@@ -188,12 +189,6 @@ $(function(){
                 // console.log(pid);
                 // console.log(size);
                 // console.log(count);
-                $("#pop").on("click","a",function(){
-                    $("#pop").removeClass("show").addClass("hide").next().hide();
-                    window.onmousewheel=document.onmousewheel=function(){
-                        return true;
-                    }
-                })
                 if(size){
                     $.ajax({
                         url:"http://127.0.0.1:3000/products/addCart",
@@ -203,27 +198,93 @@ $(function(){
                             // console.log(result);
                             if(result.code==1){
                                 // window.alert(`${result.msg}`);
-                                
+                                toast(result.msg,false);
+                                /*
                                 $("#pop").removeClass("hide").addClass("show").children("p").html(`${result.msg}`).parent().next().show();
                                 //禁止滚轮滚动
                                 window.onmousewheel=document.onmousewheel=function(){
                                     return false;
-                                }
+                                }*/
                             }else{
                                 window.alert(`网络故障，请检查`);
                             }
                         }
                     })
                 }else{
-                    $("#pop").removeClass("hide").addClass("show").children("p").html(`请选择尺寸`).parent().next().show();
+                    /*$("#pop").removeClass("hide").addClass("show").children("p").html(`请选择尺寸`).parent().next().show();
                     window.onmousewheel=document.onmousewheel=function(){
                         return false;
-                    }
+                    }*/
+                    toast("请选择尺寸",false);
                 }
                 
             })
+        
 
-
+            /****封装提示方法******/
+            function toast(msg,bool){
+                if(bool==false){
+                    $("#pop").removeClass("hide").addClass("show").children("p").html(msg).parent().next().show();
+                    //禁止滚轮滚动
+                    window.onmousewheel=document.onmousewheel=function(){
+                        return false;
+                    }
+                
+                }else{
+                    $("#pop").removeClass("show").addClass("hide").next().hide();
+                    window.onmousewheel=document.onmousewheel=function(){
+                        return true;
+                    }
+                }
+                
+            }
+            /****取消提示框********************/
+            $("#pop").on("click","a",function(){
+                toast("",true)
+            })
+            /****商品推荐***/
+            var html=`<div id="caroudel-item1" style="float: left;">`;
+            for(item of recomment.slice(0,3)){
+                html+=`
+                <div class="item1 lf">
+                    <a class="img-item" href="product_details.html?pid=${item.pid}">
+                        <img src="${item.img}" alt="">
+                        <p>${item.title}</p>
+                    </a>
+                </div>`
+            }
+            html+=`</div><div id="caroudel-item2" style="float: left;">`
+            for(item of recomment.slice(3)){
+                html+=`
+                <div class="item2 lf">
+                    <a class="img-item" href="product_details.html?pid=${item.pid}">
+                        <img src="${item.img}" alt="">
+                        <p>${item.title}</p>
+                    </a>
+                </div>`
+            }
+            html+=`</div>`
+            $("#in-carsel").html(html);
+            /***商品推荐 */
+            var speed = 20;
+            var tab = document.getElementById("carousel");
+            var tab1 = document.getElementById("caroudel-item1");
+            var tab2 = document.getElementById("caroudel-item2");
+            console.log(tab.offsetWidth);
+            function task() {
+                if (tab2.offsetWidth - tab.scrollLeft <= 0)
+                    tab.scrollLeft -= tab1.offsetWidth
+                else {
+                    tab.scrollLeft++;
+                }
+            }
+            var timer= setInterval(task, speed);
+            tab.onmouseover = function () {
+                clearInterval(timer);
+            };
+            tab.onmouseout = function () {
+                timer=setInterval(task, speed)
+            };
         }
         
     })

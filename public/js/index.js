@@ -77,19 +77,6 @@ $(function(){
       )
     }
     })
-    /***********音频播放************* */
-    
-    $("#music").on("click",function(){
-      // console.log($(this).children(":first").children());
-      var audio=document.getElementsByTagName("audio")[0];
-      if(audio.paused){
-        audio.play();
-        $(this).children(":first").show();
-      }else{
-        audio.pause();
-        $(this).children(":first").hide();
-      }
-    })
 
   // function task(){
   //   var $tar=$("#carousel img.show");

@@ -30,7 +30,20 @@ $(function(){
                 if(uid){
                     location.href="cart.html"
                 }else{
-                    window.alert("请先登录");
+                    // window.alert("请先登录");
+                    $("#headerPop").removeClass("hide").addClass("show").children("p").html(`请登录哦`).parent().next().show();
+                    //禁止滚轮滚动
+                    window.onmousewheel=document.onmousewheel=function(){
+                        return false;
+                    }
+                    /**取消提示框 */
+                    $("#headerPop").on("click","a",function(){
+                        $("#headerPop").removeClass("show").addClass("hide").next().hide();
+                        window.onmousewheel=document.onmousewheel=function(){
+                        return true;
+                        }
+                    })
+                    
                 }
             })
             
