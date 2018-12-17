@@ -1,3 +1,14 @@
+#main>p{
+    color:#c39429;
+    font-size:16px;
+    font-weight:bold;
+    
+}
+#main>p>span{
+    font-family:"Embassy","mv boli";
+    font-size:24px;
+    font-weight: normal;   
+}
 #my-collect{
     width:1150px;
     overflow: hidden;

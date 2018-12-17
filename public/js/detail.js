@@ -219,29 +219,31 @@ $(function(){
                 }
                 
             })
-        
-
-            /****封装提示方法******/
-            function toast(msg,bool){
-                if(bool==false){
-                    $("#pop").removeClass("hide").addClass("show").children("p").html(msg).parent().next().show();
-                    //禁止滚轮滚动
-                    window.onmousewheel=document.onmousewheel=function(){
-                        return false;
-                    }
-                
+            /*********添加收藏夹*********/
+            $("#addCollect").on("click",function(e){
+                var scrollTop=document.body.scrollTop|| document.documentElement.scrollTop;
+                if(scrollTop>0)window.scrollTo(0,0);
+                e.preventDefault();
+                var uid=sessionStorage.getItem("uid");
+                if(!uid){
+                    // window.alert("请登录");
+                    toast("请登录",false);
+                    return;
                 }else{
-                    $("#pop").removeClass("show").addClass("hide").next().hide();
-                    window.onmousewheel=document.onmousewheel=function(){
-                        return true;
-                    }
+                    var pid=product.pid;
+                    $.ajax({
+                        url:"http://127.0.0.1:3000/products/addCollect",
+                        data:{uid,pid},
+                        type:"get",
+                        success:function(result){
+                            // console.log(result);
+                            toast(result.msg,false);       
+                        }
+                    })
                 }
                 
-            }
-            /****取消提示框********************/
-            $("#pop").on("click","a",function(){
-                toast("",true)
             })
+            
             /****商品推荐***/
             var html=`<div id="caroudel-item1" style="float: left;">`;
             for(item of recomment.slice(0,3)){

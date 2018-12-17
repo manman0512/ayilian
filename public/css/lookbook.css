@@ -1,4 +1,18 @@
 /*********look-book商品的样式***********/
+#main>p.nav{
+    color:#c39429;
+    font-size:16px;
+    font-weight:bold;
+    padding-bottom:20px;
+    padding-top:10px;
+    border-bottom:1px solid #ddd;
+    margin-bottom:20px;
+}
+#main>p.nav>span{
+    font-family:"Embassy","mv boli";
+    font-size:24px;
+    font-weight: normal;   
+}
 #main #lb-cool{
     display: flex;
     justify-content: space-between;

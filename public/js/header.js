@@ -20,15 +20,23 @@ $(function(){
                 sessionStorage.removeItem("uid");
                 $("#about-me").html(`<a href="login.html">登录</a>
                 <a href="register.html">注册</a>
-                <a href="#" id='my-cart'>我的购物车</a>
-                <a href="#">我的订单</a>`);
+                <a href="jacascript:;" id='my-cart'>我的购物车</a>
+                <a href="jacascript:;" id="my-coll">我的收藏</a>
+                <a href="jacascript:;">我的订单</a>`);
             })
-            $("#my-cart").on("click",function(e){
-                console.log(123);
-                e.preventDefault();
+            $("#about-me").on("click","a",function(e){
+                // console.log(123);
+                // e.preventDefault();
+                var $tar=$(e.target);
+                var l="";
                 var uid=sessionStorage.getItem("uid");
+                if($tar.is("#my-cart")){
+                    l=`cart.html?uid=${uid}`
+                }else if($tar.is("#my-coll")){
+                    l=`collect.html?uid=${uid}`
+                }
                 if(uid){
-                    location.href="cart.html"
+                    location.href=l
                 }else{
                     // window.alert("请先登录");
                     $("#headerPop").removeClass("hide").addClass("show").children("p").html(`请登录哦`).parent().next().show();
@@ -46,19 +54,6 @@ $(function(){
                     
                 }
             })
-            
-            // $.ajax({
-            //     url:"http://127.0.0.1:3000/user/islogin",
-            //     type:"get",
-            //     success:function(result){
-            //         console.log(result);
-            //         if(result.email){
-            //             var $html=$(`<span>欢迎${result.email}</span><a href="index.html">注销</a>`)
-            //         $html.replaceAll("#about-me>a:lt(2)");
-            //         }
-                    
-            //     }
-            // })
                 var $btn=$(".search img").on("click",function(){
 				var $tar=$(this);
 				var kwords=$tar.parent().prev().val();
