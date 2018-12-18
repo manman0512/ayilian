@@ -11,15 +11,45 @@
 <body>
 <div id="header"></div>
 <div id="main">
-    <p>我的视频<span>Video</span></p>
-    <video src="video/ayl2018winter.MP4" autoplay loop></video>
-    <div class="control">
+    <div class="videoDiv">
+        <p>我的视频<span>Video</span></p>
+        <video src="video/ayl2018winter.MP4" autoplay loop id="v3"></video>
+        <div class="control">
+        </div>
+        <div class="icon">
+            <i></i><span>123</span>
+            <i></i><span>123</span>
+        </div>
+        
     </div>
+    
 </div>
 <div id="footer"></div>
-<script src="js/jquery-1.11.3.js"></script>
+ <script src="js/jquery-1.11.3.js"></script>
 <script src="js/header.js"></script>
-<script src="js/footer.js"></script>
-<script src="js/collect.js"></script>
+<script src="js/footer.js"></script> 
+<script src="js/video.js"></script>
+<script>
+    var v3=document.getElementById("v3");
+    var control=document.getElementsByClassName("control")[0];
+    var btn=document.getElementsByTagName("i")[0];
+    control.onclick=v3.onclick=function(){
+        // console.log(123)
+        if(v3.paused){
+            v3.play();
+            control.style.display='none';
+        }else{
+            v3.pause();
+            control.style.display='block';
+        }
+
+    }
+    btn.onclick=function(){
+        var val=parseInt(this.nextElementSibling.innerHTML)
+        console.log(val);
+        this.nextElementSibling.innerHTML=val+1;
+    }
+    
+</script>
 </body>
 </html>

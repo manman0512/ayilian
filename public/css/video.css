@@ -1,4 +1,7 @@
+#main .videoDiv{
+    position: relative;
 
+}
 #main video{
     width:1150px;
 }
@@ -15,7 +18,7 @@
     font-size:24px;
     font-weight: normal;   
 }
-#main>.control{
+#main .control{
     width:50px;
     height:50px;
     background-image:url("../img/index/play.png");
@@ -23,6 +26,31 @@
     position:absolute;
     top:50%;
     right:50%;
-    margin-left:125px;
-    margin-top:-76px;
+    margin-left:-26px;
+    margin-top:-26px;
+    transition: all .5s linear;
+}
+.videoDiv .icon{
+    text-align: right;
+}
+.videoDiv .icon i{
+    width:19px;
+    height:15px;
+    display: inline-block;
+    margin:0 5px;
+}
+.videoDiv .icon>:first-child{
+    background-image: url("../img/fashion/ico_1.png");
+}
+.videoDiv .icon>:nth-child(3){
+    background-image: url("../img/fashion/ico_2.png");
+}
+.videoDiv .icon span{
+    font-family: Corbel;
+    font-size:18px;
+    display: inline-block;
+    height:20px;
+    width:30px;
+    line-height: 20px;
+    font-weight: bold;
 }
