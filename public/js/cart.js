@@ -30,9 +30,9 @@ $(function(){
             $("#cart").children(":first").after(html);
              /*******************确认删除提示框************/
             $("#cart .cart-item ul").on("click","li:last>span",function(e){
-                //  console.log(e.target);
-                //  console.log(this);
-                var $tar=$(this)
+                console.log(`要删除？`)
+                var $tar=$(this);
+                console.log($tar);
                 var html=$(this).parent().parent().children(":first").children(":last").html();
                 // console.log(html);
                 $("#confirm").show().children("span").html(`您确认要删除 ${html} 吗？`).parent().next().show().prev().on("click","a",function(e){
@@ -45,14 +45,26 @@ $(function(){
                     //     console.log(yuan);
                     //     $("#yuan").html(yuan.toFixed(2));
                     // }
+                    // console.log(`确定`);
+                    var pSum=parseFloat($tar.parent().prev().children("span").html());
+                    var count=parseInt($tar.parent().prev().prev().children("span").html());
+                    if($tar.parent().parent().children(":first").children("input").prop("checked")){
+                        //  console.log(price);
+                        var yuan=parseFloat($("#yuan").html())-pSum;
+                        $("#yuan").html(yuan.toFixed(2));
+                        var count1=parseInt($("#count").html())-count;
+                        $("#count").html(count1)
+                     }
                     $tar.parent().parent().parent().remove();
-                    location.reload();
+                    // location.reload();
                     var uid=sessionStorage.getItem("uid");
                     var pid=$tar.parent().siblings().first().children("[data-id]").data("id");
+                    var size=$tar.parent().parent().children(":eq(1)").html().split("|")[1];
+                    console.log(size);
                     console.log(pid);
                     $.ajax({
                         url:"http://127.0.0.1:3000/products/deleteCart",
-                        data:{uid,pid},
+                        data:{uid,pid,size},
                         type:"get",
                         success:function(result){
                             // console.log(result);
@@ -62,6 +74,8 @@ $(function(){
                 $a.parent().hide().next().hide();
                 
             });
+
+
                 
             })
             /**************商品复选框按钮的控制************/
@@ -74,9 +88,11 @@ $(function(){
                 // console.log(typeof(uncheck));
                 console.log(uncheck.length==0);
                 if(uncheck.length!=0){
-                    $(".cart-count input[type=checkbox]").prop("checked",false);
+                    var $tar=$(".cart-count input[type=checkbox]").prop("checked",false);
+                    $tar.next().html(`<span>&nbsp;全选</span>`);
                 }else{
-                    $(".cart-count input[type=checkbox]").prop("checked",true).next().html(`<span>&nbsp;取消全选</span>`);
+                    var $tar=$(".cart-count input[type=checkbox]").prop("checked",true).next().html(`<span>&nbsp;取消全选</span>`);
+                    $tar.next().html(`<span>&nbsp;取消全选</span>`);
                 }
                 //简写
                 // $(".cart-count input[type=checkbox]").prop("checked",uncheck.length==0);

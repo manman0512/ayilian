@@ -19,11 +19,10 @@ $(window).bind("load",function(){
                 //取到footer本身的高度
                 footerHeight=$footer.height();
                 //footer距离屏幕顶部的距离
-                footerTop=($(window).scrollTop()+$(window).height()-footerHeight)+"px";
-                // console.log(footerHeight);
-                // console.log(footerTop);
+                footerTop=$(window).scrollTop()+$(window).height()-footerHeight;
                 //如果页面内容的高度小于屏幕的高度，footer将绝对定位到屏幕底部，否则保留正常的定位
-                if(($(document.body).height()+footerHeight)<$(window).height()){
+                if(($(document.body).height())<$(window).height()){
+                    
                     $footer.css({position:"absolute",top:footerTop})
                     //  .stop().animate({
                     //     

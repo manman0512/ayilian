@@ -1,0 +1,28 @@
+
+#main video{
+    width:1150px;
+}
+#main>p{
+    color:#c39429;
+    font-size:16px;
+    font-weight:bold;
+    padding-bottom:20px;
+    margin-bottom:20px;
+    border-bottom:1px solid #ddd;
+}
+#main>p>span{
+    font-family:"Embassy","mv boli";
+    font-size:24px;
+    font-weight: normal;   
+}
+#main>.control{
+    width:50px;
+    height:50px;
+    background-image:url("../img/index/play.png");
+    background-color:#c39429;
+    position:absolute;
+    top:50%;
+    right:50%;
+    margin-left:125px;
+    margin-top:-76px;
+}

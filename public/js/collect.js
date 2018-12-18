@@ -18,27 +18,26 @@ $(function(){
             }
             $("#my-collect").html(html);
             $(".collect-item").on("click",function(e){
+                var pid=$(this).children("img").data("id")
+                var uid=sessionStorage.getItem("uid");
                 console.log(this);
                 var $tar=$(e.target);
                 console.log($tar);
                 if($tar.is("a.delete")){
                     console.log(123);
                     $tar.parent().remove();
-                }else if($tar.is("a.addCart")){
-                    // window.alert(`添加成功`);
-                    var pid=$(".collect-item").children("img").data("id");
-                    var uid=sessionStorage.getItem("uid");
                     $.ajax({
-                        url:"http://127.0.0.1:3000/products/addCollect",
+                        url:"http://127.0.0.1:3000/products/deleteCollect",
                         data:{uid,pid},
                         type:"get",
                         success:function(result){
                             console.log(result);
-                            toast(result.msg,false);   
                         }
                     })
+                }else if($tar.is("a.addCart")){
+                    location.href=`product_details.html?lid=${pid}`
                 }else if($tar.is("img")){
-                    location.href="product_details.html?lid=1"
+                    location.href=`product_details.html?lid=${pid}`
                 }
             })
         }

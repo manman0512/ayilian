@@ -23,10 +23,10 @@ $(function(){
             $("#lb-cool").on("click","a",function(e){
                 e.preventDefault();
                 var img=$(this).children("img").attr("src");
-                $("#pop>img").prop("src",`${img}`).parent().show().next().addClass("show");
+                $("#pop>img").prop("src",`${img}`).parent().show().next().show();;
             });
             $("#pop>span").on("click",function(){
-                $(this).parent().hide().next().removeClass("show");
+                $(this).parent().hide().next().hide();
             })
         }
      })
