@@ -2,10 +2,10 @@
     position: relative;
 
 }
-#main video{
+#main>.videoDiv video{
     width:1150px;
 }
-#main>p{
+#main>.videoDiv>p{
     color:#c39429;
     font-size:16px;
     font-weight:bold;
@@ -13,7 +13,7 @@
     margin-bottom:20px;
     border-bottom:1px solid #ddd;
 }
-#main>p>span{
+#main>.videoDiv>p>span{
     font-family:"Embassy","mv boli";
     font-size:24px;
     font-weight: normal;   
@@ -25,9 +25,9 @@
     background-color:#c39429;
     position:absolute;
     top:50%;
-    right:50%;
+    left:50%;
     margin-left:-26px;
-    margin-top:-26px;
+    margin-top:5px;
     transition: all .5s linear;
 }
 .videoDiv .icon{

@@ -5,21 +5,41 @@
 }
 #fashion-news .right-content{
     width:750px;
+    position: relative;
+}
+#fashion-news .right-content .carousel .outer{
+    width:580px;
+    overflow: hidden;
+    margin:0 85px;
+    height:435px;
 }
 #fashion-news .right-content .carousel>a{
     display: inline-block;
     width:40px;
     height:40px;
     margin:0 20px;
+    position: absolute;
+    top:217px;
 }
-#fashion-news .right-content .carousel>img{
+#fashion-news .right-content .carousel a.next{
+    right:0;
+}
+#fashion-news .right-content .carousel ul{
+    overflow: hidden;
+    width:1740px;
+    transition: all .5s linear;
+}
+#fashion-news .right-content .carousel ul>li{
+    float:left;
+}
+#fashion-news .right-content .carousel ul>li>img{
     vertical-align:middle;
     width:580px;
 }
-#fashion-news .right-content .carousel>a:first-child{
+#fashion-news .right-content .carousel a:first-child{
     background-image: url("../img/fashion/prev.jpg");
 }
-#fashion-news .right-content .carousel>a~a {
+#fashion-news .right-content .carousel a~a {
     background-image: url("../img/fashion/next.jpg");
 }
 /***********点赞收藏部分***************/
@@ -79,11 +99,60 @@
 
 #fashion-news .fashion-content{
     width:740px;
-    border:1px solid red;
+    /* border:1px solid red; */
     text-align: center;
 }
 #fashion-news .fashion-content img{
     margin-left:6px;
     vertical-align:bottom;
     width:720px;
+}
+.fashion-content p,.fashion-content pre{
+    text-align: center;
+    font-size: 14px;
+    color:#aa521f;
+    font-style: italic;
+    margin:10px 0;
+    font-family: "微软雅黑"
+}
+.fashion-content h3{
+    background:#aa521f;
+    padding:3px;
+    color:#fff;
+    font-size:18px;
+    width:200px;
+    margin:0 20px;
+    font-weight:normal;
+    border-radius: 3px;
+    font-style:italic;
+    margin-top:20px;
+}
+.fashion-content h4{
+    color:#c96c36;
+    margin:20px;
+    width:200px;
+    text-align: left;
+    margin-top:5px;
+    font-style: italic;
+}
+.fashion-content h2{
+    color: #aa521f;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 20px;
+    text-align: center;
+}
+/******totop*****/
+#totop{
+    position:fixed;
+    right:0;
+    bottom:100px;
+    width:40px;
+    height:40px;
+    background:#000;
+    color:#fff;
+    display:none;
+}
+#totop:hover{
+    background: #c4952a;
 }

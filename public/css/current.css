@@ -1,8 +1,8 @@
 div#box{
-    border:1px solid #ddd;
+    /* border:1px solid #ddd; */
     width:960px;
     height:460px;
-    margin:0 auto;
+    margin:0 190px;
     position:relative;
     top:0;
     left:0; 
@@ -11,7 +11,7 @@ div#box{
 div#box>div{
     position: absolute;
     top:0;
-     background-image: url("../img/current/banner/banner1.jpg"); 
+    background-image: url("../img/current/banner/banner1.jpg"); 
     background-repeat: no-repeat;
     width:120px;
     height:460px;
@@ -79,4 +79,112 @@ div#box>div:nth-child(3){
 }
 #images>a:hover{
     opacity: 0.5;
+}
+/****/
+#images .desc{
+    width:250px;
+    height: 170px;
+    overflow: hidden;
+    transition:opacity 10s linear;
+    margin-top:10px;
+    margin-bottom:10px;
+    position:relative;
+    top:0;
+    left:0;
+}
+#images .desc .mask{
+    /* display: none;  */
+    position: absolute;
+    width:0px;
+    height:170px;
+    opacity:0.6;
+    transition:all 2s;
+    background: rgba(0, 0,0,0.5);
+}
+ #images .desc:hover .mask{
+    z-index: 1;
+    width:250px;
+} 
+.desc a{
+    display:inline-block;
+}
+#images .desc a img{
+    vertical-align: bottom;
+    transition:all 0.3s linear;
+}
+#images .detail{
+    /* border:1px solid red; */
+    width:150px;
+    height:50px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-left:-75px;
+    margin-top:-25px;
+    z-index: 2;
+}
+
+#images .detail p{
+    display:block;
+    position:absolute;
+    transition: all 1s linear;
+}
+#images .detail p.ptop{
+    top:0px;
+    right:-0px;
+    width:0;
+    height: 2px;
+    background: #fff
+}
+#images .desc:hover p.ptop{
+    /* border:1px solid #fff; */
+    width:160px;
+    transition: all 1s;
+}
+#images .detail p.pright{
+    bottom:0px;
+    right:0px;
+    height:0px;
+    width:2px;
+    background: #fff
+}
+#images .desc:hover p.pright{
+    /* border:1px solid #fff; */
+    height:60px;
+    transition: all 1s;
+}
+#images .detail p.pbottom{
+    bottom:0px;
+    left:0px;
+    width:0;
+    height: 2px;
+    background: #fff
+}
+#images .desc:hover p.pbottom{
+    /* border:1px solid #fff; */
+    width:160px;
+    transition: all 1s;
+}
+#images .detail p.pleft{
+    top:0px;
+    left:0px;
+    height:0px;
+    width:2px;
+    background: #fff
+}
+#images .desc:hover p.pleft{
+    /* border:1px solid #fff; */
+    height:60px;
+    transition: all 1s;
+}
+#images .detail a{
+    position: relative;
+    top:9px;
+    left:40px;   
+    color:#c08e1d;
+    font-size:1.2rem;
+    font-weight:bold;
+    z-index: 20;
+    /* opacity: 0;  */
+    display: none;
 }

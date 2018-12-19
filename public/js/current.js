@@ -1,5 +1,6 @@
 $(function(){
     var i=1;
+    // 轮播导航
     function shake(){
         if(i==5)i=1
         else i++;
@@ -13,5 +14,11 @@ $(function(){
             $("#box>img").attr("src",`img/current/banner/banner${i}.jpg`);
         },1000);
     }
+    /***鼠标进入事件 */
     setInterval(shake,3000);
+    $(".desc").on("mouseenter",function(){
+        $(this).children(":last").children("a").show(1000).parent().prev().children("img").css("transform","scale(1.1)");
+    }).on("mouseleave",function(){
+        $(this).children(":last").children("a").hide(1000).parent().prev().children("img").css("transform","scale(1)");
+    })
 })

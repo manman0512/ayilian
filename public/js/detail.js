@@ -152,7 +152,7 @@ $(function(){
             `;
             }
             $("#product-details").html(html);
-
+            /***返回顶部 */
             $(window).on("scroll",function(){
                 var scrollTop=document.body.scrollTop|| document.documentElement.scrollTop;
                 if(scrollTop>=500){
